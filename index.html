@@ -4,15 +4,180 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        @font-face{ 
-            font-family: dogica; 
-            src: url('../fonts/dogica.ttf');
-        }
-    </style>
+    <link rel="stylesheet" href="css/main.css">
 </head>
-<body style="background-color: rgb(200, 177, 228);">
-    <h1 style = "color: rgb(47, 24, 75); font-family: dogica; "> This is my Portfolio </h1>
-    <p style = "color: rgb(47, 24, 75); font-family: dogica;"> Attempt to get an Internship </p>
+<body>
+        <header id="header">
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#aboutme">About Me</a>
+                <a href="#projects">Projects</a>
+                <a href="#music">Music</a>
+                <a href="#resume">Resume</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <section id="home">
+            <h1>Home</h1>
+            <div class="center">
+                <div class="box">
+                    <div class="intro"> 
+                        Hello<br> Welcome to my Portfolio <br> My name is Annie Wong<br>Currently learning how to <br> become <i>a game developer</i></div>
+                    <div class="pfp">
+                        <img src="images/portfolioprofile.png" class="image1" alt="profilepic">
+                    </div>
+                </div>
+            </div>
+         </section>
+        <section id="aboutme">
+            <h1>About Me</h1>
+            <div class="center">
+                <div class="box2">
+                    <div class="infoboutme">
+                         <span class="title"> About Me</span>
+                         <p><br><br></p>
+                         <div class="section-desc">
+                            <span class="text">
+                                <p> I'm a junior undergrad student at UCSD.
+                                    Before college, I spend 24/7 gaming, watching anime, 
+                                    and listening and making music.During quarantine, I got into game-making and coding through <i>Minecraft</i>.
+                                    I created <a href="https://www.planetminecraft.com/project/welcome-to-the-dreamworld/"><b>my first adventure map</b></a> 
+                                    , a horror-puzzle story game, which sparked my passion for <i>game development</i>. <br>
+                                     I'm into games that have compelling story such as <i>Life is Strange</i> and <i>Detroit:Become Human</i>.
+                                    I also enjoy playing action-adventure games w/ unqiue lore such as <i>Assassin Creed</i> and <i>Genshin Impact</i>.
+                                    I also like to play horror-puzzle games such as <i>Ib, Omori, </i> and <i>Catherine</i>. <br> 
+                                    I'm hoping in the future I can create games in all of my favorite genres.
+                                </p>
+                            </span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h1>Projects</h1>
+            <div class = "center">
+                <div class="box3">
+                    <div class="project_header"> Project </div>
+                    <div class="smalldetail">
+                        <h3>Click on the image for more detail</h3>
+                    </div>
+                    <div class="row_square">
+                        <!--First Adventure Map  -->
+                        <div class="column_square">
+                            <div class="image_container">
+                                <img src="images/Icon Thumbnail.png" class="image2" alt="firstmap">
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button  class="button jsbutton">Javascript</button>
+                                    <button class="button midibutton">MIDI</button>
+                                </div>
+                                <ul>
+                                    <li>Created functions to display particles in unique shapes</li>
+                                    <li>Reprogrammed the in-game chat to be interactive for the story to progress</li>
+                                    <li>Designed all buildings after picture references</li>
+                                    <li>Took part in arranging the soundtrack</li>
+                                    <li>Reprogrammed existing mobs to become game bosses</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Second Adventure Map -->
+                        <div class="column_square">
+                            <div class="image_container">
+                                <img src="images/Thumbnail.png" class="image3" alt="secondmap">
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button  class="button jsbutton">Javascript</button>
+                                    <button class="button midibutton">MIDI</button>
+                                </div>
+                                <ul>
+                                    <li>Created functions to interact with puzzles</li>
+                                    <li>Reprogrammed the in-game chat to be interactive for the story to progress</li>
+                                    <li>Use in-game program to determine the ending based on the player's choice</li>
+                                    <li>Re-design existing items to replicate certain objects</li>
+                                    <li>Designed all buildings after picture references</li>
+                                    <li>Took part in arranging the soundtrack</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row_square">
+                        <!-- First solo java game -->
+                        <div class="column_square">
+                            <div class="image_container">
+                                <img src="images/Intro_screen.png" class="images4" alt="classproject">
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button class="button grfbutton">Greenfoot</button>
+                                </div>
+                                <ul>
+                                    <li>Programmed two of the puzzles to replicate the puzzle from the game <i>Ib</i> </li>
+                                    <li>Designed all backgrounds and UI features</li>
+                                    <li>A class project for my Java course</li>
+                                    <li>Coded the entire game</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Third Map but WIP -->
+                        <div class="column_square">
+                            <div class="image_container">
+                                <img src="images/WIP.png" class="image3" alt="wip">
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button  class="button jsbutton">Javascript</button>
+                                    <button class="button midibutton">MIDI</button>
+                                    <button class="button benchbutton">Blockbench</button>
+                                </div>
+                                <ul>
+                                    <li>Re-design in-game models and items</li>
+                                    <li>Designed all buildings after picture references</li>
+                                    <li>Create functions to ride on rides</li>
+                                    <li>Took part in arranging the soundtrack</li>
+                                    <li>Uses in-game commands to determine the ending based on the player's 
+                                        choice
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+        </section>
+        <section id="music">
+            <h1>Music</h1>
+            <div class="center">
+                <div class="box4">
+                    <div class="project_header">Music Production</div>
+                    <div class="smalldetail">
+                        <h3>Here are songs that I arranged and composed</h3>
+                    </div>
+                    <div class="arr_header">
+                            <h3>Arrangments</h3>
+                        </div>
+                    <div class="row_square">
+                        
+                    </div>
+                   
+
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <h1>Resume</h1>
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+        </section>
+
 </body>
 </html>
+

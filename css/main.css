@@ -1,4 +1,260 @@
+/*regular font*/
 @font-face{
-    font-family: dogica;
+    font-family: regular;
     src:url(../fonts/dogica.ttf)
 }
+/*bold font*/
+@font-face{
+    font-family: b0ld;
+    src:url(../fonts/dogicabold.ttf)
+}
+/*pixel font*/
+@font-face{
+    font-family: pixel;
+    src:url(../fonts/dogicapixel.ttf)
+}
+/*pixel bold font*/
+@font-face{
+    font-family: pixelb0ld;
+    src:url(../fonts/dogicapixelbold.ttf)
+}
+body{
+    background-color:rgb(200, 177, 228);
+    padding-right:160px;
+    padding-left:160px;
+}
+*{
+    margin:0
+}
+
+nav{
+    text-align: center;
+    margin-top:10px;
+}
+nav a{
+    background-color: rgb(244,239,250);
+    display:inline-block;
+    border:3px solid rgb(47,24,75);
+    border-radius: 3px;
+    text-decoration:none;
+    color:rgb(47,24,75);
+    font-family: regular;
+    width:160px;
+    padding: 10px 1px;
+    margin: 10px 10px;
+}
+nav a:hover{
+    background-color:rgb(250,250,250); 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#home,
+#aboutme,
+#contact,
+#projects,
+#music,
+#resume{ 
+    font-family:regular;
+    margin-bottom: 15px;
+}
+
+.center{
+    text-align:center;
+}
+/* home page */
+.box{
+    display:inline-block;
+    height:500px;
+    width: 1120px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    gap:22px;
+    text-align: left;
+    padding-top: 80px;
+}
+
+.intro{
+    line-height: 4;
+    text-align:left;
+    display:inline-box;
+    position:absolute; left:300px;
+    
+}
+
+.pfp{
+    display:inline-block;
+    padding-left: 60%;
+}
+
+.image1{
+    height:300px;
+    float: right; 
+}
+
+/* about page */
+
+.box2{
+    display:inline-block;
+    height:700px;
+    width:1120px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    gap:22px;
+    padding-top: 30px;
+
+    text-align: left;
+}
+
+.infoaboutme{
+    text-align:left;
+    display:inline-box;
+    margin-left: 90px;
+}
+
+.section-desc{
+    padding-left:90px;
+    padding-right:60px;
+}
+.title{
+    font-family: pixelb0ld;
+    margin-left:90px;
+}
+.text{
+    line-height: 3;
+}
+
+/* project page */
+.smalldetail{
+    font-size: 8px;
+    margin-bottom:20px;
+    color:rgb(102, 81, 128);
+}
+.box3{
+    display:inline-block;
+    height: 1555px;
+    width: 1120px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    padding-top: 30px;
+
+}
+.project_header{
+    font-family:pixelb0ld;
+    margin:auto;
+    margin-bottom: 10px;
+}
+
+.row_square{
+    border:1px solid #000;
+    height: 750px;
+    display:flex;
+    justify-content:center;
+}
+.column_square{
+    height:750px;
+    width:500px;
+    /* border:1px solid #8f0303; */
+    /* display:flex;
+    justify-content: center; */
+ 
+}
+.image_container{
+    background-color: rgb(102, 81, 128);
+    transition: all .3s ease-in-out;  
+    max-width:100%;
+    margin-left:4px;
+    margin-right:4px;
+    padding-top:4px;
+    padding-bottom:4px;
+    height:250px;
+    text-align: center;
+    display:block;
+}
+.image_container img.image2{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+.content_desc{
+    /* border:1px solid orangered; */
+    width:auto;
+    height:auto;
+}
+.buttongroup{
+    /* border:1px solid blue; */
+    display:flex;
+    width: auto;
+    justify-content: center;
+}
+.button{
+    text-align: center;
+    font-family: pixel;
+    font-size: 12px;
+    display:flex;
+    padding:10px;
+    border-radius: 4px;
+    float:left;
+    color:rgb(244,239,250);
+    margin-top:5px;
+    margin-right: 5px;
+    cursor:not-allowed;
+}
+.javabutton{
+    background-color: darkslateblue;
+}
+.jsbutton{
+    background-color: #634d65;
+}
+.midibutton{
+    background-color: #b59eab;
+}
+.grfbutton{
+    background-color:darkgreen;
+}
+.benchbutton{
+    background-color: dodgerblue;
+}
+ul{
+    list-style-position: outside;
+    line-height: 1.5;
+    text-align: left;  
+    padding-right: 20px;  
+}
+li{
+    margin-bottom: 15px;
+}
+.image_container img.image3{
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+}
+.image_container img.image4{
+    object-fit: contain;
+    height: 480px;
+    width: 250px;
+
+}
+
+/* music page */
+.box4{
+    display:inline-block;
+    height: 1000px;
+    width: 1120px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    padding-top: 30px;
+}
+.arr_header{
+    padding-top: 10px;
+    display: flex;
+    justify-content: left;
+}
+
+
