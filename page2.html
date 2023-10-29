@@ -11,7 +11,7 @@
     <div class="hero">
         <div class="music">
             <div class="track">
-                <img src="images/Play Button.png">
+                <img src="images/Play Button.png" id="playBtn">
                 <div id="waveform"></div>
                 <!-- <audio id="waveform" src="media/Chase Me.mp3"></audio> -->
                 <div>please work</div>
@@ -19,12 +19,33 @@
         </div>
     </div>
     <script>
+        var playBtn = document.getElementById("playBtn");
+
         const wavesurfer = WaveSurfer.create({
         container: '#waveform',
-        waveColor: '#4F4A85',
-        progressColor: '#383351',
+        waveColor: '#BDBFC5',
+        progressColor: '#D9D9D9 ',
+        barWidth: 4 ,
+        responsive: true,
+        barRadius: 90,
+        barRadius: 4, 
         });
         wavesurfer.load('media/Chase Me.mp3');
+        // if player click on button, it will change button
+        playBtn.onclick = function(){
+            wavesurfer.playPause();
+            if(playBtn.src.includes("play.png")){
+                playBtn.src = "images/Pause Button.png";
+            }else{
+                playBtn.src = "images/Play Button.png";
+            }
+        }
+        //if it finish playing, change the button back to play button
+        //stop the music 
+        wavesurfer.on('finish', function(){
+            playBtn.src = "images/Play Button.png";
+            wavesurfer.stop();
+        })
     </script>
 </body>
 </html>
