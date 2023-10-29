@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Audio Test</title>
+    <link rel="stylesheet" href="css/test.css">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+</head>
+<body>
+    <div class="hero">
+        <div class="music">
+            <div class="track">
+                <img src="images/Play Button.png">
+                <div id="waveform"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var wavesurfer = WaveSurfer.create({
+        container: '#waveform',
+        waveColor: '#4F4A85',
+        progressColor: '#383351',
+        });
+        wavesurfer.load('media/Chase Me.mp3')
+    </script>
+</body>
+</html>
