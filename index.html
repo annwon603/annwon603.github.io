@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
 </head>
 <body>
         <header id="header">
@@ -65,7 +66,49 @@
                     </div>
                     <!-- First row -->
                     <div class="row_square"> 
-                        <!--First Adventure Map  -->
+                        <!-- First Unity Game -->
+                        <div class="column_square">
+                            <div class = "image_container">
+                                <img src="images/vgdc-game-title-screen.png" class="image5" atl="Evil_Incarnate">
+                            </div>
+                            <div class = "content_desc">
+                                <div class ="buttongroup">
+                                     <button class = "button csharpbutton">C#</button>
+                                     <button class = "button unitybutton">Unity</button>
+                                     <button class = "button midibutton">MIDI</button>
+                                </div>
+                                <ul>
+                                    <li> Designed and programmed the UI/UX of the game</li>
+                                    <li> Composed the title theme and background music loop with MIDI and DAW</li>
+                                    <li> Contributed to creating the program for the timer</li>
+                                    <li> Created this game with a team of 4 within two weeks</li>
+                                    <li> This game was for my university video game development club's event</li>
+                                    <li> First Unity game</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- First Java Game -->
+                        <div class="column_square">
+                            <div class="image_container">
+                                <img src="images/Intro_screen.png" class="images4" alt="classproject">
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button class="button grfbutton">Greenfoot</button>
+                                </div>
+                                <ul>
+                                    <li>Programmed two of the puzzles to replicate the puzzle from the game <i>Ib</i> </li>
+                                    <li>Designed all backgrounds and UI features</li>
+                                    <li>A class project for my Java course</li>
+                                    <li>Coded the entire game</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second Row -->
+                    <div class="row_square">
+                        <!-- First Adventure map -->
                         <div class="column_square">
                             <div class="image_container">
                                 <img src="images/Icon Thumbnail.png" class="image2" alt="firstmap">
@@ -89,6 +132,7 @@
                         <div class="column_square">
                             <div class="image_container">
                                 <img src="images/Thumbnail.png" class="image3" alt="secondmap">
+                                
                             </div>
                             <div class="content_desc">
                                 <div class="buttongroup">
@@ -107,27 +151,9 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Second Row -->
+                    <!-- Third Row -->
+                    <!-- Third map but in WIP -->
                     <div class="row_square">
-                        <!-- First solo java game -->
-                        <div class="column_square">
-                            <div class="image_container">
-                                <img src="images/Intro_screen.png" class="images4" alt="classproject">
-                            </div>
-                            <div class="content_desc">
-                                <div class="buttongroup">
-                                    <button class="button javabutton">Java</button>
-                                    <button class="button grfbutton">Greenfoot</button>
-                                </div>
-                                <ul>
-                                    <li>Programmed two of the puzzles to replicate the puzzle from the game <i>Ib</i> </li>
-                                    <li>Designed all backgrounds and UI features</li>
-                                    <li>A class project for my Java course</li>
-                                    <li>Coded the entire game</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!-- Third Map but WIP -->
                         <div class="column_square">
                             <div class="image_container">
                                 <img src="images/WIP.png" class="image3" alt="wip">
@@ -145,8 +171,8 @@
                                     <li>Create functions to ride on rides</li>
                                     <li>Took part in arranging the soundtrack</li>
                                     <li>Uses in-game commands to determine the ending based on the player's 
-                                        choice
-                                    </li>
+                                        choice</li>
+                                    <li>Currently work in progress</li>
                                 </ul>
                             </div>
                         </div>
@@ -167,8 +193,43 @@
                         </div>
                     <div class="row_square">
                         <!-- First Adventure Map Tracklist -->
-                        <div class="column_square">
-                            <img src="WTHDW_cover.png" alt="first_album">
+                        <div class="column_square bg2">
+                            <div class="album_cover_container">
+                                <div class="album_image">
+                                    <img src="images/WTHDW_cover.png" class="image4" alt="first_album">
+                                </div><!--
+                            --><div class="album_title">
+                                    <p>Welcome to the Dreamworld <br> Soundtrack</p>
+                                </div>
+                            </div>
+                            <div class="column_square bg3">
+                                <div class="track_header">
+                                    Track Number
+                                </div>
+                                <div class="list">
+                                    <div class="track_number">Chase Me
+                                        <div class="track_body">
+                                            <img src="images/Play Button.png" alt="playbutton">
+                                            <div id="waveform"></div>
+                                        </div>
+                                    </div>
+                                    <div class="track_number">hello
+                                        <div class="track_body">
+                                            <img src="images/Play Button.png" alt="playbutton">
+                                        </div>
+                                    </div>
+                                    <div class="track_number">bye
+                                        <div class="track_body">
+                                            <img src="images/Play Button.png" alt="playbutton">
+                                            <div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="list">
+                                    <div>Hi</div>
+                                </div>
+                            </div>
+                        </div>
                         </div>
                         
                     </div>
@@ -183,7 +244,16 @@
         <section id="contact">
             <h1>Contact</h1>
         </section>
+    <script>
+        // const wavesurfer = WaveSurfer.create({
+        // container: '#waveform',
+        // waveColor: '#4F4A85',
+        // progressColor: '#383351',
+        // url: 'annwon603.github.io/media/Chase Me.mp3',
+        // });
 
+
+    </script>
 </body>
 </html>
 
