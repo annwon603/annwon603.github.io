@@ -327,7 +327,19 @@ img.image4{
     font-weight: 100;
 }
 .track{
+    display: flex;
+    align-items: center;
+}
 
+.track img{
+    cursor: pointer;
+    margin-right: 20px; 
+    height: 41px;
+    width: 36px;
+}
+
+.track div{
+    flex: 1;
 }
 /* For First album  */
 .bg3{
