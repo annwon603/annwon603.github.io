@@ -1,4 +1,4 @@
-import WaveSurfer from "wavesurfer.js";
+import WaveSurfer from "/node_modules/dist/wavesurfer.js";
 
 var playBtn = document.getElementById("playBtn");
 
