@@ -151,7 +151,7 @@ html{
 }
 
 .row_square{
-    border:1px solid #000;
+    /* border:1px solid #000; */
     height: 750px;
     display:flex;
     justify-content:center;
@@ -373,4 +373,23 @@ div.list div.track_number:before {
 .test{
     width: 300px;
     height:300px;
+}
+
+.box4{
+    display:inline-block;
+    height: 250px;
+    width: 900px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    padding-top: 30px;
+}
+
+.box4 .text{
+    text-align: left;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.box4 .section-desc{
+    padding-left:50px;
 }
