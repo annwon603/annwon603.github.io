@@ -13,8 +13,6 @@
             <div class="track">
                 <img src="images/Play Button.png" id="playBtn">
                 <div id="waveform"></div>
-                <!-- <audio id="waveform" src="media/Chase Me.mp3"></audio> -->
-                <div>please work</div>
             </div>
         </div>
     </div>
@@ -27,14 +25,14 @@
         progressColor: '#D9D9D9 ',
         barWidth: 4 ,
         responsive: true,
-        barRadius: 90,
+        height: 30,
         barRadius: 4, 
         });
         wavesurfer.load('media/Chase Me.mp3');
         // if player click on button, it will change button
         playBtn.onclick = function(){
             wavesurfer.playPause();
-            if(playBtn.src.includes("play.png")){
+            if(playBtn.src.includes("Play Button.png")){
                 playBtn.src = "images/Pause Button.png";
             }else{
                 playBtn.src = "images/Play Button.png";
