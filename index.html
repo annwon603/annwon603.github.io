@@ -208,23 +208,24 @@
                                     Track Number
                                 </div>
                                 <div class="list">
-                                    <div class="track_number">Chase Me
+                                    <div class="track_number" id="track1">Chase Me
                                         <div class="track_body">
                                             <div class="track">
-                                                <button id="play" class = circle_button>
-                                                        <img src="images/Play Button.png" alt="playBtn" id="playBtn">
+                                                <button id="play" class = circle_button id="play1">
+                                                        <img src="images/Play Button.png" alt="playBtn1" id="playBtn1">
                                                     </button>
-                                                    
                                                 <div id="waveform"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="track_number">hello
+                                    <div class="track_number" id="track2">Fly High
                                         <div class="track_body">
-                                            <!-- <img src="images/Play Button.png" alt="playbutton"> -->
+                                           <button id="play" class = circle_button id="play2">
+                                                        <img src="images/Play Button.png" alt="playBtn2" id="playBtn2">
+                                                    </button>
                                         </div>
                                     </div>
-                                    <div class="track_number">bye
+                                    <div class="track_number">What
                                         <div class="track_body">
                                             <!-- <img src="images/Play Button.png" alt="playbutton"> -->
                                             <div></div>
@@ -252,33 +253,86 @@
             <h1>Contact</h1>
         </section>
     <script>
-        var playBtn = document.getElementById("playBtn");
+        // var playBtn = document.getElementById("playBtn");
+        const audioFiles= [ 'media/Chase Me.mp3', 'media/Fly High.ogg', 'media/WHAT.mp3' ,
+                             'media/Piri.mp3','media/Deja Vu.mp3','media/Silent Night.ogg'];
 
-        const wavesurfer = WaveSurfer.create({
-        container: '#waveform',
-        waveColor: '#BDBFC5',
-        progressColor: '#D9D9D9 ',
-        barWidth: 2 ,
-        responsive: true,
-        height: 30,
-        barRadius: 4, 
-        });
-        wavesurfer.load('media/Chase Me.mp3');
-        // if player click on button, it will change button
-        playBtn.onclick = function(){
-            wavesurfer.playPause();
-            if(playBtn.getAttribute("src") === "images/Play Button.png"){
-               playBtn.setAttribute("src", "images/Pause Button.png");
-            }else{
-               playBtn.setAttribute("src", "images/Play Button.png");
+        let currentTrackIndex = 0;
+        // const wavesurfer = WaveSurfer.create({
+        // container: '#waveform',
+        // waveColor: '#BDBFC5',
+        // progressColor: '#D9D9D9 ',
+        // barWidth: 2 ,
+        // responsive: true,
+        // height: 30,
+        // barRadius: 4, 
+        // });
+        // wavesurfer.load('media/Chase Me.mp3');
+        function createWaveSurfer(id) {
+            return WaveSurfer.create({
+                container: `#waveform${id}`,
+                waveColor: '#BDBFC5',
+                progressColor: '#D9D9D9',
+                barWidth: 2,
+                responsive: true,
+                height: 30,
+                barRadius: 4,
+            });
+        }
+
+        function loadTrack(index) {
+            if (wavesurfers[index]) {
+                wavesurfers[index].load(audioFiles[index]);
+                currentTrackIndex = index;
+                document.getElementById(`playBtn${index}`).setAttribute("src", "images/Play Button.png");
             }
         }
+        
+        for (let i = 0; i < audioFiles.length; i++) {
+            wavesurfers.push(createWaveSurfer(i + 1));
+            loadTrack(i);
+        }
+
+        function togglePlay(index) {
+            const playBtn = document.getElementById(`playBtn${index}`);
+            if (wavesurfers[index].isPlaying()) {
+                wavesurfers[index].pause();
+                playBtn.setAttribute("src", "images/Play Button.png");
+            } else {
+                wavesurfers[index].play();
+                playBtn.setAttribute("src", "images/Pause Button.png");
+            }
+        }
+           function setupPlayButton(index) {
+            const playBtn = document.getElementById(`play${index}`);
+            playBtn.onclick = () => togglePlay(index);
+        }
+
+        for (let i = 0; i < audioFiles.length; i++) {
+            setupPlayButton(i);
+            wavesurfers[i].on('finish', () => {
+                document.getElementById(`playBtn${currentTrackIndex}`).setAttribute("src", "images/Play Button.png");
+                wavesurfers[currentTrackIndex].stop();
+                currentTrackIndex = (currentTrackIndex + 1) % audioFiles.length;
+                loadTrack(currentTrackIndex);
+            });
+        }
+
+        // if player click on button, it will change button
+        // playBtn.onclick = function(){
+        //     wavesurfer.playPause();
+        //     if(playBtn.getAttribute("src") === "images/Play Button.png"){
+        //        playBtn.setAttribute("src", "images/Pause Button.png");
+        //     }else{
+        //        playBtn.setAttribute("src", "images/Play Button.png");
+        //     }
+        // }
         //if it finish playing, change the button back to play button
         //stop the music 
-        wavesurfer.on('finish', function(){
-            playBtn.setAttribute("src", "images/Play Button.png");
-            wavesurfer.stop();
-        })
+        // wavesurfer.on('finish', function(){
+        //     playBtn.setAttribute("src", "images/Play Button.png");
+        //     wavesurfer.stop();
+        // })
     </script>
 </body>
 </html>
