@@ -15,10 +15,14 @@
     color: #555;
 }
 
-track{
+.track{
     display: flex;
     align-items: center;
     margin-top: 20px;
+}
+
+.track img{
+    cursor: pointer; 
 }
 
 .track div{
