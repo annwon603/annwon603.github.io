@@ -27,9 +27,13 @@
 //             playBtn.setAttribute("src", "../images/Play Button.png");
 //             wavesurfer.stop();
 //         })
-function changeImage(){
-    var img = document.getElementById("play");
-    var isPlaying = false;
-    
+// function changeImage(){
+//     var img = document.getElementById("play");
+//     var button = document.getElementById("playBtn")
+//     if(img.scr.includes("Play Button.png")){
+//         img.src = "images/Pause Button.png";
+//     }else {
+//         img.src = "images/Play Button.png"
+//     }
    
-}
+// }
