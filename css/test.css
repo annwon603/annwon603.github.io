@@ -28,6 +28,8 @@
 .track img{
     cursor: pointer;
     margin-right: 20px; 
+    height: 41px;
+    width: 36px;
 }
 
 .track div{
