@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Audio Test</title>
     <link rel="stylesheet" href="css/test.css">
-    <script type="module" src="javascript/myscript.js"></script>
+    <script src="https://unpkg.com/wavesurfer.js@7"></script>
 </head>
 <body>
     <div class="hero">
@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <!-- <script>
+    <script>
         var playBtn = document.getElementById("playBtn");
 
         const wavesurfer = WaveSurfer.create({
@@ -44,6 +44,6 @@
             playBtn.setAttribute("src", "images/Play Button.png");
             wavesurfer.stop();
         })
-    </script> -->
+    </script>
 </body>
 </html>
