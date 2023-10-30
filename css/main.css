@@ -340,7 +340,7 @@ img.image4{
     height: 41px;
     width: 36px;
     border: none;
-    background-color:transparent;
+    background-color: inherit;
 }
 
 .track div{
