@@ -18,12 +18,14 @@
     font-family: pixelb0ld;
     src:url(../fonts/dogicapixelbold.ttf)
 }
+
 body{
     background-color:rgb(200, 177, 228);
-    display: flex;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 0; */
 }
 *{
     margin:0
@@ -51,6 +53,36 @@ nav a{
 
 
 }
+/* made it responsive */
+@media screen and (max-width: 1000px){
+
+   nav{
+    display:flex;
+    justify-content: center;
+    min-width: 1200px;
+   }
+   /* body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+   } */
+   .box{
+    margin-left: 35px;
+   }
+   .box2{
+    margin-left: 35px;
+   }
+   .box3{
+    margin-left: 35px;
+   }
+   .box4{
+    margin-left: 150px;
+   }
+   
+}
+
+
 nav a:hover{
     background-color:rgb(250,250,250); 
 }
