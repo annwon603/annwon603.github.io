@@ -81,7 +81,7 @@ nav a{
    } */
    
 }
-@media screen and (max-width: 999px){
+@media only screen and (max-width: 999px){
     .box{
     margin-left: 35px;
    }
@@ -95,16 +95,13 @@ nav a{
    .box4{
     margin-left: 150px;
    }
+    .section-desc{
+        font-size: 1vw;
+    }
 }
 /* @media screen and (max-width: 414px){
-    .section-desc{
-        font-size: 3vw;
-    }
 
-    .box2{
-    margin-left: 35px;
-    height:400px;
-   }
+
 } */
 
 
