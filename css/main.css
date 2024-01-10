@@ -157,6 +157,8 @@ html{
 .section-desc{
     padding-left:90px;
     padding-right:60px;
+    width:auto;
+    height:auto;
 }
 .title{
     font-family: pixelb0ld;
