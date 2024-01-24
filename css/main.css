@@ -99,10 +99,24 @@ nav a{
         font-size: 2vw;
     }
 }
-/* @media screen and (max-width: 414px){
-
-
-} */
+@media only screen and (max-width: 769px){
+    .box{
+    margin-left: 35px;
+   }
+   .box2{
+    margin-left: 35px;
+    height:auto;
+   }
+   .box3{
+    margin-left: 35px;
+   }
+   .box4{
+    margin-left: 150px;
+   }
+    .section-desc{
+        font-size: 2vw;
+    }
+}
 
 
 nav a:hover{
@@ -266,6 +280,9 @@ html{
     margin-top:5px;
     margin-right: 5px;
     cursor:not-allowed;
+}
+.gdbutton{
+    background-color: rgb(82, 138, 195);
 }
 .javabutton{
     background-color: darkslateblue;
