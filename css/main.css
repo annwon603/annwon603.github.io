@@ -212,7 +212,7 @@ html{
 }
 .box3{
     display:inline-block;
-    height: 4200px;
+    height: 4300px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
@@ -227,7 +227,7 @@ html{
 }
 
 .row_square2{
-    height: 1000px;
+    height: 1100px;
     display:flex;
     justify-content:center;
 }
