@@ -99,7 +99,7 @@ nav a{
         font-size: 2vw;
     }
 }
-@media only screen and (max-width: 769px){
+/* @media only screen and (max-width: 769px){
     .box{
     margin-left: 35px;
    }
@@ -115,6 +115,23 @@ nav a{
    }
     .section-desc{
         font-size: 2vw;
+    }
+} */
+
+@media (max-width: 768px) {
+    .column_square {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+    .section-desc {
+        font-size: 1.1rem; /* Slightly smaller on narrow screens */
+        padding: 10px;
+        line-height: 1.6; /* Improves readability */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .box2 {
+        height: auto; /* Allows content to grow dynamically */
+        padding: 30px; /* Adds consistent spacing */
     }
 }
 
@@ -173,15 +190,15 @@ html{
 
 .box2{
     display:inline-block;
-    height:700px;
     width:1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
     gap:22px;
+    text-align: left;
+    height: 700px;
     padding-top: 30px;
 
-    text-align: left;
 }
 
 .infoaboutme{
@@ -196,6 +213,15 @@ html{
     width:auto;
     height:auto;
 }
+
+/* .section-desc {
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    line-height: 1.6; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 20px;
+} */
+
 .title{
     font-family: pixelb0ld;
     margin-left:90px;
@@ -212,7 +238,7 @@ html{
 }
 .box3{
     display:inline-block;
-    height: 5300px;
+    height: 5200px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
@@ -226,24 +252,37 @@ html{
     margin-bottom: 10px;
 }
 
-.row_square2{
+/* .row_square2{
     height: 1100px;
     display:flex;
     justify-content:center;
-}
-.row_square{
+} */
+/* .row_square{ */
     /* border:1px solid #000; */
-    height: 920px;
+    /* height: 920px;
     display:flex;
     justify-content:center;
+} */
+
+.row_square, .row_square2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to new rows if needed */
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds spacing between items */
 }
-.column_square{
+
+
+
+/* .column_square{
     height:900px;
     width:500px;
-    /* border:1px solid #8f0303; */
-    /* display:flex;
-    justify-content: center; */
- 
+} */
+
+.column_square {
+    flex: 1 1 calc(50% - 20px); /* Allows columns to resize and fit within the row */
+    max-width: 500px; /* Prevents overly large columns */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
 .image_container{
@@ -267,10 +306,15 @@ html{
     width:500px;
     height: auto;
 }
-.content_desc{
-    /* border:1px solid orangered; */
+/* .content_desc{
     width:auto;
     height:auto;
+} */
+
+.content_desc {
+    width: 100%;
+    height: auto; /* Adjusts height based on content */
+    padding: 10px; /* Adds spacing inside */
 }
 .buttongroup{
     /* border:1px solid blue; */
