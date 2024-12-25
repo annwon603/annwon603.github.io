@@ -41,13 +41,14 @@ button:hover{
 }
 
 
-.music-icon{
-    height: 250px;
-    width: 250px;
-    border-radius : 50%
+#music-icon{
+    height: 80px;
+    width: 80px;
+    /* border-radius : 50%; */
 }
 
 .music-player{
+    /* flex-direction: column; */
     position:absolute;
     top: 50%;
     left: 50%;
@@ -56,13 +57,23 @@ button:hover{
     width: 70%;
     height: 340px;
     border-radius: 15px;
-    padding: 10px 18px;
+    padding: 10px 30px;
     display: flex;
     align-items: center;
     
 }
 
-
+.body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.spectrum-column{
+    font-family: monospace;
+    flex-direction: column;
+    display: flex;
+    max-width: 800px;
+}
 .music{
     width: 90%;
     max-width: 300px;
