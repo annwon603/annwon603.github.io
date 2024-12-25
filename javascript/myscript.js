@@ -1,39 +1,51 @@
-// import WaveSurfer from "wavesurfer.js";
 
-// var playBtn = document.getElementById("playBtn");
 
-//         const wavesurfer = WaveSurfer.create({
-//         container: '#waveform',
-//         waveColor: '#BDBFC5',
-//         progressColor: '#D9D9D9 ',
-//         barWidth: 2 ,
-//         responsive: true,
-//         height: 30,
-//         barRadius: 4, 
-//         });
-//         wavesurfer.load('../media/Chase Me.mp3');
-//         // if player click on button, it will change button
-//         playBtn.onclick = function(){
-//             wavesurfer.playPause();
-//             if(playBtn.getAttribute("src") === "../images/Play Button.png"){
-//                playBtn.setAttribute("src", "../images/Pause Button.png");
-//             }else{
-//                playBtn.setAttribute("src", "../images/Play Button.png");
-//             }
-//         }
-//         //if it finish playing, change the button back to play button
-//         //stop the music 
-//         wavesurfer.on('finish', function(){
-//             playBtn.setAttribute("src", "../images/Play Button.png");
-//             wavesurfer.stop();
-//         })
-// function changeImage(){
-//     var img = document.getElementById("play");
-//     var button = document.getElementById("playBtn")
-//     if(img.scr.includes("Play Button.png")){
-//         img.src = "images/Pause Button.png";
-//     }else {
-//         img.src = "images/Play Button.png"
-//     }
-   
-// }
+var buttons = {
+    play: document.getElementById("btn-play"),
+    pause: document.getElementById("btn-pause"),
+    stop: document.getElementById("btn-stop")
+};
+
+var Spectrum = WaveSurfer.create({
+    container: '#audio-spectrum',
+    progressColor: "#D9D9D9" ,
+    barWidth: 2,
+    // barGap: 3,
+    // barRadius: 3,
+    height: 80,
+    cursorWidth: 2,
+    responsive: true,
+    waveColor:"rgb(122,122,122)",
+    hideScrollbar: true,
+    cursorColor: "#FFFFFF",
+    cursorWidth: 3,
+    normalize: true
+
+});
+
+// Play button
+buttons.play.addEventListener("click", function () {
+    Spectrum.play();
+    buttons.stop.disabled = false;
+    buttons.pause.disabled = false;
+    buttons.play.disabled = true;
+}, false);
+
+buttons.pause.addEventListener("click", function () {
+    Spectrum.pause();
+    buttons.pause.disabled = true;
+    buttons.play.disabled = false;
+}, false);
+
+buttons.stop.addEventListener("click", function () {
+    Spectrum.stop();
+    buttons.stop.disabled = true;
+    buttons.pause.disabled = true;
+    buttons.play.disabled = false;
+}, false);
+
+Spectrum.on('ready', function () {
+    buttons.play.disabled = false;
+});
+
+Spectrum.load('media/WHAT.mp3');

@@ -5,45 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Audio Test</title>
     <link rel="stylesheet" href="css/test.css">
-    <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <div class="hero">
-        <div class="music">
-            <div class="track">
-                <img src="images/Play Button.png" id="playBtn">
-                <div id="waveform"></div>
+
+    <div class = "container">
+        <div class = "music-player">
+            <img src = "images/WTHDW_cover.png" alt = "music-icon" id = "music-icon">
+            <div class = "info">
+                <h1> Dreamcatcher Cover</h1>
+                <h3> Arrangment</h3>
+                <div id = "audio-spectrum"></div>
+                <div class = "control-bar">
+                    <button type = "button" id = "btn-play" value = "Play" disabled = "disabled">
+                        <i class="fa-solid fa-play fa-xl"></i>
+                    </button>
+                    <button type = "button" id = "btn-pause" value = "Pause" disabled = "disabled">
+                        <i class="fa-solid fa-pause fa-xl"></i>
+                    </button>
+                    <button type = "button" id = "btn-stop" value = "Stop" disabled = "disabled">
+                        <i class="fa-solid fa-stop fa-xl"></i>
+                    </button>  
+                </div>
             </div>
         </div>
     </div>
-    <script>
-        var playBtn = document.getElementById("playBtn");
+    
+    <script src="https://cdn.jsdelivr.net/npm/wavesurfer@1.3.4/dist/wavesurfer.min.js"></script>
 
-        const wavesurfer = WaveSurfer.create({
-        container: '#waveform',
-        waveColor: '#BDBFC5',
-        progressColor: '#D9D9D9 ',
-        barWidth: 2 ,
-        responsive: true,
-        height: 30,
-        barRadius: 4, 
-        });
-        wavesurfer.load('media/Chase Me.mp3');
-        // if player click on button, it will change button
-        playBtn.onclick = function(){
-            wavesurfer.playPause();
-            if(playBtn.getAttribute("src") === "images/Play Button.png"){
-               playBtn.setAttribute("src", "images/Pause Button.png");
-            }else{
-               playBtn.setAttribute("src", "images/Play Button.png");
-            }
-        }
-        //if it finish playing, change the button back to play button
-        //stop the music 
-        wavesurfer.on('finish', function(){
-            playBtn.setAttribute("src", "images/Play Button.png");
-            wavesurfer.stop();
-        })
-    </script>
+    <script src = "javascript/myscript.js"></script>
+   
 </body>
 </html>
