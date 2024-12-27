@@ -5,35 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/wavesurfer.js@7"></script>
-    <script src="javascript/myscript.js"></script>
+    <!-- <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="javascript/myscript.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-<body>
-        <header id="header">
+    <body>
+        <header class="header">
             <nav>
                 <a href="#home">Home</a>
                 <a href="#aboutme">About Me</a>
                 <a href="#projects">Projects</a>
                 <a href="#music">Music</a>
-                <a href="#resume">Resume</a>
+                <a href="https://drive.google.com/file/d/1ANwfHSZ2n5jkwFKwqPjBma5mPsoh70Vm/view?usp=sharing">Resume</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
 
         <section id="home">
-            <h1>Home</h1>
+            <!-- <h1>Home</h1> -->
             <div class="center">
                 <div class="box">
-                    <div class="intro"> 
-                        Hello<br> Welcome to my Portfolio <br> My name is Annie Wong<br>Currently learning how to <br> become <i>a game developer</i></div>
                     <div class="pfp">
                         <img src="images/portfolioprofile.png" class="image1" alt="profilepic">
+                        <div class="intro"> 
+                            Hello<br> Welcome to my Portfolio <br> My name is Annie Wong<br>Wanting to learn how to <br> become <i>a game developer</i>
+                        </div>
                     </div>
                 </div>
             </div>
          </section>
         <section id="aboutme">
-            <h1>About Me</h1>
+            <!-- <h1>About Me</h1> -->
             <div class="center">
                 <div class="box2">
                     <div class="infoboutme">
@@ -41,7 +43,7 @@
                          <p><br><br></p>
                          <div class="section-desc">
                             <span class="text">
-                                <p> I'm a junior undergrad student at UCSD.
+                                <p> I'm a senior undergrad student at UCSD.
                                     Before college, I spend 24/7 gaming, watching anime, 
                                     and listening and making music.During quarantine, I got into game-making and coding through <i>Minecraft</i>.
                                     I created <a href="https://www.planetminecraft.com/project/welcome-to-the-dreamworld/"><b>my first adventure map</b></a> 
@@ -58,19 +60,85 @@
             </div>
         </section>
         <section id="projects">
-            <h1>Projects</h1>
+            <!-- <h1>Projects</h1> -->
             <div class = "center">
                 <div class="box3">
                     <div class="project_header"> Project </div>
                     <div class="smalldetail">
-                        <h3>Click on the image for more detail</h3>
+                        <h3>Click on the image to try playing</h3>
                     </div>
-                    <!-- First row -->
+                    <div class="row_square2">
+                        <!-- First row-->
+                         <!-- ND Tech-->
+                        <div class = "column_square">
+                            <div class = "image_container">
+                                <a href="https://ndtech.itch.io/draggin-eggs">
+                                    <img src = "images/DragginEggs.png" class = "image3" alt="egg">
+                                </a>
+                            </div>
+                            <div class = "content_desc">
+                                <div class = "buttongroup">
+                                    <button class = "button csharpbutton">C#</button>
+                                    <button class = "button unitybutton">Unity</button>
+                                    <button class = "button midibutton">MIDI</button>
+                                    <button class = "button grfbutton">FMOD</button>
+                                </div>
+                                <ul>
+                                    <li>Collaborated with a team of 5 interns to create a Unity 2D education research-based game 
+                                        targeted towards children to learn the basis of machine learning and classification
+                                    </li>
+                                    <li>In charge of creating and implementing a system design to effeciently handle interactions between different
+                                        catorgories of game objects
+                                    </li>
+                                    <li>Designed and programmed key features such as conveyor belt movement, object sorting,
+                                        and trait-based movement mechanics to simulate classification processes. 
+                                    </li>
+                                    <li>
+                                        Programmed the cutscenes and the transitions between different scenes
+                                    </li>
+                                    <li>
+                                        Composed and implemented music and sound effect with FL Studio and FMOD 
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column_square">
+                            <!-- Don't Space out-->
+                            <div class = "image_container">
+                                <a href="https://ethancreek.itch.io/dont-space-out">
+                                <img src="images/dontspaceout.png" class = "image2" atl="Don't_Space_Out">
+                                </a>
+                            </div>
+                            <div class = "content_desc">
+                                <div class = "buttongroup">
+                                    <button class = "button csharpbutton">C#</button>
+                                    <button class = "button unitybutton">Unity</button>
+                                    <button class = "button midibutton">MIDI</button>
+                                    <button class = "button grfbutton">FMOD</button>
+                                </div>
+                                <ul>
+                                    <li> A fast-paced bullet hell game where you shoot but solve puzzle at the same time</li>
+                                    <li> Pitched the fundamental gameplay which is shooting but fixing the ship at the same time by solving puzzles </li>
+                                    <li> Composed the starting menu theme</li>
+                                    <li> Contributed to the UI programming:
+                                        <ul>
+                                            <li> Interactable animated buttons to switch scenes</li>
+                                            <li> Buttons to choose difficulty and ship model </li>
+                                        </ul>  </li>
+                                    <li> Contributed to audio programming such as implementing sound effects and the background music theme</li>
+                                    <li> Created during a two week game jam with a team of 6</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Second row -->
                     <div class="row_square"> 
                         <!-- First Unity Game -->
                         <div class="column_square">
                             <div class = "image_container">
+                                <a href="https://ani03.itch.io/evil-incarnate">
                                 <img src="images/vgdc-game-title-screen.png" class="image5" atl="Evil_Incarnate">
+                                </a>
                             </div>
                             <div class = "content_desc">
                                 <div class ="buttongroup">
@@ -79,61 +147,136 @@
                                      <button class = "button midibutton">MIDI</button>
                                 </div>
                                 <ul>
+                                    <li> A short horror game inspired by FNAF and Phasmophobia</li>
                                     <li> Designed and programmed the UI/UX of the game</li>
                                     <li> Composed the title theme and background music loop with MIDI and DAW</li>
                                     <li> Contributed to creating the program for the timer</li>
-                                    <li> Created this game with a team of 4 within two weeks</li>
-                                    <li> This game was for my university video game development club's event</li>
+                                    <li> Created this game with a team of 4 within a two weeks game jam</li>
                                     <li> First Unity game</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- First Java Game -->
-                        <div class="column_square">
+                        <div class = "column_square">
                             <div class="image_container">
-                                <img src="images/Intro_screen.png" class="images4" alt="classproject">
+                                <a href = "https://youtu.be/dudU-OAvdn0">
+                                    <img src="images/climategames.png" class="image3" alt="wip">
+                                </a>
                             </div>
                             <div class="content_desc">
-                                <div class="buttongroup">
-                                    <button class="button javabutton">Java</button>
-                                    <button class="button grfbutton">Greenfoot</button>
+                                <div class = "buttongroup">
+                                    <button class = "button ue5button"> UE5 </button>
+                                    <button class = "button cppbutton"> C++ </button>
+                                    <button class = "button blueprintbutton"> Blueprint </button>
+                                    <button class = "button wwbutton"> Wwise </button>
+                                    <button class = "button wipbutton"> WIP </button>
                                 </div>
                                 <ul>
-                                    <li>Programmed two of the puzzles to replicate the puzzle from the game <i>Ib</i> </li>
-                                    <li>Designed all backgrounds and UI features</li>
-                                    <li>A class project for my Java course</li>
-                                    <li>Coded the entire game</li>
+                                    <li>Assisted in developing by using Unreal Engine 5, focusing on gameplay mechanics and collaborative game design.
+                                    </li>
+                                    <li>Researched and implemented advanced spatial audio techniques to enhance immersive experiences, optimizing sound design for interactive environments</li>
+                                    <li>Utilized Wwise to debug and test sound designs, ensuring seamless audio integration and performance optimization.</li>
+                                    <li>Designed and implemented a Blueprint system to dynamically switch MetaSounds 
+                                        based on the in-game time of day, enhancing environmental realism and player immersion.</li>                               
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- Second Row -->
+                    <!-- First GoDot Game-->
                     <div class="row_square">
-                        <!-- First Adventure map -->
                         <div class="column_square">
-                            <div class="image_container">
-                                <img src="images/Icon Thumbnail.png" class="image2" alt="firstmap">
+                            <div class = "image_container">
+                                <a href="https://drive.google.com/drive/folders/1LjnZ3IUUYyZLv4REmWYWCADFPH76azjM?usp=drive_link"><image src="images/ConjuringCafe.PNG" class="image3" alt="cafegame"></a>
                             </div>
-                            <div class="content_desc">
+                            <div class = "content_desc">
                                 <div class="buttongroup">
-                                    <button class="button javabutton">Java</button>
-                                    <button  class="button jsbutton">Javascript</button>
+                                    <button class="button gdbutton">GDScript</button>
                                     <button class="button midibutton">MIDI</button>
                                 </div>
                                 <ul>
-                                    <li>Created functions to display particles in unique shapes</li>
-                                    <li>Reprogrammed the in-game chat to be interactive for the story to progress</li>
-                                    <li>Designed all buildings after picture references</li>
-                                    <li>Took part in arranging the soundtrack</li>
-                                    <li>Reprogrammed existing mobs to become game bosses</li>
+                                    <li>Cottagecore themed cafe game with witch influence</li>
+                                    <li>Collaborated in a team of 10 for a 3 day game jam</li>
+                                    <li>Contributed to the game design:</li>
+                                        <ul>
+                                            <li>Introduced card-based ingredient storage</li>
+                                            <li>Suggested integrating crafting stations in the same main game scene to enhance user experience </li>
+                                        </ul>
+                                    <li>Created and programmed in audio into the game</li>
                                 </ul>
                             </div>
                         </div>
-                        <!-- Second Adventure Map -->
                         <div class="column_square">
                             <div class="image_container">
-                                <img src="images/Thumbnail.png" class="image3" alt="secondmap">
-                                
+                                <a href="https://ani03.itch.io/liminal-doors"><img src="images/Intro_screen.png" class="images4" alt="classproject"></a>
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class = "button ue5button">Unreal Engine 5</button>
+                                    <button class = "button cppbutton">C++</button>
+                                    <button class = "button blueprintbutton">Blueprint</button>
+                                </div>
+                                <ul>
+                                    <li>Topdown 2D-3D Hybrid horror rpg style game inspired by my favorite game <i>Ib</i></li>
+                                    <li>Currently work in progress but first puzzle is availabe to play</li>
+                                    <li>Designed all backgrounds and UI features</li>
+                                    <li>Programmed player movement and interactions with objects</li>
+                                    <li>Created a global variable to keep track of what puzzle is solved</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- First Adventure map -->
+                    <!-- Third Row -->
+                    <!-- Second Adventure Map-->
+                    <div class="row_square">
+                         <div class="column_square">
+                            <div class = "image_container">
+                                <a href="https://vrchat.com/home/launch?worldId=wrld_a10d1a53-8043-46c3-9467-7e8762ea1c33">
+                                    <img src="images/Meow_Around.png" class = "image5" alt="wip">
+                                </a>
+                            </div>
+                            <div class = "content_desc">
+                                <div class="buttongroup">
+                                    <button class = "button csharpbutton">C#</button>
+                                    <button class = "button unitybutton">Unity</button>
+                                    <button class = "button midibutton">MIDI</button>
+                                    <button class = "button wipbutton">WIP</button>
+                                </div> 
+                            </div>
+                            <ul>
+                                <li> Cat version of Animal Crossing where all the villagers are cats and can interact with them at the market  </li>
+                                <li> VR game develop in Unity by using Udonsharp which is C# but for Unity VR </li>
+                                <li> Programmed the dialouge system and the UI system </li>
+                                <li> Composed the background music </li>
+                                <li> Created with a partner over a 10 week VR program held by Origami Air, XR developer company</li>
+                            </ul>
+                        </div>
+                        <div class="column_square">
+                            <div class = "image_container">
+                                <a href= "https://ethancreek.itch.io/athenaeum">
+                                <img src="images/library.PNG" class = "image5" alt="library">
+                                </a>
+                            </div>
+                            <div class = "content_desc">
+                                <div class = "buttongroup">
+                                    <button class = "button csharpbutton">C#</button>
+                                    <button class = "button unitybutton">Unity</button>
+                                    <button class = "button midibutton">MIDI</button>
+                                    <button class = "button grfbutton">FMOD</button>
+                                </div>
+                                <ul>
+                                    <li> A roguelite deckbuilder where you venture through a mysterious library battling cultists and collecting cards. </li>
+                                    <li> A club wide game project consist of 60 members </li>
+                                    <li> Co-composed and co-arranged the battle and boss theme </li>
+                                </ul>
+                            </div>
+                        </div>  
+                    </div>               
+                        <!-- Third map but in WIP -->
+                    <div class = "row_square">
+                        <div class="column_square">
+                            <div class="image_container">
+                                <a href="https://www.planetminecraft.com/project/dystopia-do-no-evil/"><img src="images/Thumbnail.png" class="image3" alt="secondmap"></a>
                             </div>
                             <div class="content_desc">
                                 <div class="buttongroup">
@@ -151,10 +294,6 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <!-- Third Row -->
-                    <!-- Third map but in WIP -->
-                    <div class="row_square">
                         <div class="column_square">
                             <div class="image_container">
                                 <img src="images/WIP.png" class="image3" alt="wip">
@@ -165,6 +304,7 @@
                                     <button  class="button jsbutton">Javascript</button>
                                     <button class="button midibutton">MIDI</button>
                                     <button class="button benchbutton">Blockbench</button>
+                                    <button class = "button wipbutton">WIP</button>
                                 </div>
                                 <ul>
                                     <li>Re-design in-game models and items</li>
@@ -173,152 +313,200 @@
                                     <li>Took part in arranging the soundtrack</li>
                                     <li>Uses in-game commands to determine the ending based on the player's 
                                         choice</li>
-                                    <li>Currently work in progress</li>
+                                    <li>Currently have no link because the map have not published yet</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
+
+                     <div class = "row_square">
+                        <div class="column_square">
+                            <div class="image_container">
+                                <a href="https://www.planetminecraft.com/project/welcome-to-the-dreamworld/"><img src="images/Icon Thumbnail.png" class="image2" alt="firstmap"></a>
+                            </div>
+                            <div class="content_desc">
+                                <div class="buttongroup">
+                                    <button class="button javabutton">Java</button>
+                                    <button  class="button jsbutton">Javascript</button>
+                                    <button class="button midibutton">MIDI</button>
+                                </div>
+                                <ul>
+                                    <li>Created functions to display particles in unique shapes</li>
+                                    <li>Reprogrammed the in-game chat to be interactive for the story to progress</li>
+                                    <li>Designed all buildings after picture references</li>
+                                    <li>Took part in arranging the soundtrack</li>
+                                    <li>Reprogrammed existing mobs to become game bosses</li>
+                                </ul>
+                            </div>
+                        </div>
+                     </div>
                 </div>
-            </div>   
+            </div>
+        </div>   
         </section>
-        <section id="music">
-            <h1>Music</h1>
-            <div class="center">
-                <div class="box4">
-                    <div class="project_header">Music Production</div>
-                    <div class="smalldetail">
-                        <h3>Here are songs that I arranged and composed</h3>
+        <section id = "music">
+            <div class = "musicBody">
+                <div class = "center">
+                    <div class = "project_header"> Music </div>
+                    <div class = "smalldetail">
+                        <h3> Songs I produced and composed </h3>
                     </div>
-                    <div class="arr_header">
-                            <h3>Arrangments</h3>
-                        </div>
-                    <div class="row_square">
-                        <!-- First Adventure Map Tracklist -->
-                        <div class="column_square bg2">
-                            <div class="album_cover_container">
-                                <div class="album_image">
-                                    <img src="images/WTHDW_cover.png" class="image4" alt="first_album">
-                                </div><!--
-                            --><div class="album_title">
-                                    <p>Welcome to the Dreamworld <br> Soundtrack</p>
-                                </div>
+                </div>
+                <div class = "spectrum-column">
+                    <div class="spectrum-container">
+                        <img src="images/dontspaceouticon.png" alt="Track 1 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Intro</h3>
+                                <p>Produced for the title starting screen of "Don't Space Out" <br>
+                                    Inspired by retro 8 bits games 
+                                </p>
                             </div>
-                            <div class="column_square bg3">
-                                <div class="track_header">
-                                    Track Number
-                                </div>
-                                <div class="list">
-                                    <div class="track_number">Chase Me
-                                        <div class="track_body">
-                                            <div class="track">
-                                                <button id="play" class = circle_button>
-                                                        <img src="images/Play Button.png" alt="playBtn1" id="playBtn1">
-                                                    </button>
-                                                    
-                                                <div id="waveform1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="track_number">Fly High
-                                        <div class="track_body">
-                                            <div class="track">
-                                                <button id="play" class = circle_button>
-                                                        <img src="images/Play Button.png" alt="playBtn2" id="playBtn2">
-                                                    </button>
-                                                <div id="waveform2"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="track_number">What
-                                        <div class="track_body">
-                                            <!-- <img src="images/Play Button.png" alt="playbutton"> -->
-                                            <div></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="list">
-                                    <div>Hi</div>
-                                </div>
-                                <a href="page2.html">
-                                    <button>Click Me!</button>
-                                </a>
+                            <div class="waveform" id="waveform1"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
                             </div>
                         </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/libraryicon.PNG" alt="Track 2 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Boss Battle</h3>
+                                <p>Co-Produced and Co-Arranged for "Athenaeum" <br>
+                                    Produced the cultist motif and pitch the game to have an orchestral soundtrack to match its mystical theme
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform2"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
                         </div>
-                        
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/Meow.png" alt="Track 3 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Bossa Meowva</h3>
+                                <p>Produced for "Meow Around and Find Out" <br>
+                                    Experimenting with a plugin MeowSynth to create a bossa nova 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform3"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/ConjuringIcon.png" alt="Track 4 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Cafe Lofi</h3>
+                                <p>Co-produced and Co-arranged for "Conjuring Cafe" <br>
+                                    In charge with the sound design and music for the game 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform4"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/Chicken.png" alt="Track 5 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Chicken</h3>
+                                <p>Produced for "Draggin Eggs" <br>
+                                    Inspired by the game "Animal Crossing" to deliver both cute and cozy atmosphere for "Draggin Eggs" 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform5"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/cave.png" alt="Track 6 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Cave</h3>
+                                <p>Produced for the cave map of "Hyperbike Exploration" <br>
+                                    The track was inspired by Minecraft caves and Genshin Impact's Dragonspine
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform6"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/evil.png" alt="Track 7 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Intro</h3>
+                                <p>Produced for "Evil Incarnate" <br>
+                                    The track was inspired by Jordan Peele's "US"
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform7"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/evil.png" alt="Track 8 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Background</h3>
+                                <p>Produced for "Evil Incarnate" <br>
+                                    The track was inspired by Jordan Peele's "US"
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform8"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="resume">
-            <h1>Resume</h1>
-        </section>
         <section id="contact">
-            <h1>Contact</h1>
+            <div class="center">
+                <div class="box4"> Feel Free to Contact Me!!
+                    <div class="section-desc">
+                         <span class="text">
+                            <p>Email: <a href="mailto:aniwong603@gmail.com">aniwong603@gmail.com</a> </p>
+                            <p>LinkedIn: <a href="https://www.linkedin.com/in/annie-wong-4030a6226/">https://www.linkedin.com/in/annie-wong</a></p>
+                            <p>Github: <a href="https://github.com/annwon603">https://github.com/annwon603</a></p>
+                    </span>
+                    </div>
+                </div>
+            </div>
         </section>
-    <script>
-        var playBtn1 = document.getElementById("playBtn1");
-        var playBtn2 = document.getElementById("playBtn2");
-        var playBtn3 = document.getElementById("playBtn3");
-        var playBtn4 = document.getElementById("playBtn4");
-        var playBtn5 = document.getElementById("playBtn5");
-
-        const wavesurfer1 = WaveSurfer.create({
-        container: '#waveform1',
-        waveColor: '#BDBFC5',
-        progressColor: '#D9D9D9 ',
-        barWidth: 2 ,
-        responsive: true,
-        height: 30,
-        barRadius: 4, 
-        });
-
-        const wavesurfer2 = WaveSurfer.create({
-        container: '#waveform2',
-        waveColor: '#BDBFC5',
-        progressColor: '#D9D9D9 ',
-        barWidth: 2 ,
-        responsive: true,
-        height: 30,
-        barRadius: 4, 
-        });
-
-        wavesurfer1.load('media/Chase Me.mp3');
-        wavesurfer2.load('media/Fly High.ogg');
-
-
-        // if player click on button, it will change button
-        playBtn1.onclick = function(){
-            wavesurfer1.playPause();
-            if(playBtn1.getAttribute("src") === "images/Play Button.png"){
-               playBtn1.setAttribute("src", "images/Pause Button.png");
-            }else{
-               playBtn1.setAttribute("src", "images/Play Button.png");
-            }
-        }
-        //if it finish playing, change the button back to play button
-        //stop the music 
-        wavesurfer1.on('finish', function(){
-            playBtn1.setAttribute("src", "images/Play Button.png");
-            wavesurfer1.stop();
-        })
-
-        playBtn2.onclick = function(){
-            wavesurfer2.playPause();
-            if(playBtn2.getAttribute("src") === "images/Play Button.png"){
-               playBtn2.setAttribute("src", "images/Pause Button.png");
-            }else{
-               playBtn2.setAttribute("src", "images/Play Button.png");
-            }
-        }
-        //if it finish playing, change the button back to play button
-        //stop the music 
-        wavesurfer2.on('finish', function(){
-            playBtn2.setAttribute("src", "images/Play Button.png");
-            wavesurfer2.stop();
-        })
-
-    </script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/wavesurfer@1.3.4/dist/wavesurfer.min.js"></script>
+        <script src="javascript/myscript.js"></script>
+    </body>
 </html>
 

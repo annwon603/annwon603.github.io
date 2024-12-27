@@ -18,31 +18,88 @@
     font-family: pixelb0ld;
     src:url(../fonts/dogicapixelbold.ttf)
 }
+
 body{
     background-color:rgb(200, 177, 228);
-    padding-right:160px;
-    padding-left:160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
 }
 *{
     margin:0
 }
 
+
 nav{
     text-align: center;
     margin-top:10px;
+    min-width:700px;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
 }
 nav a{
     background-color: rgb(244,239,250);
-    display:inline-block;
     border:3px solid rgb(47,24,75);
     border-radius: 3px;
     text-decoration:none;
     color:rgb(47,24,75);
     font-family: regular;
-    width:160px;
+    width:150px;
     padding: 10px 1px;
-    margin: 10px 10px;
+    margin-top: 10px;
+    margin-bottom:10px;
+
 }
+/* made it responsive */
+@media screen and (min-width: 1000px){
+
+   nav{
+    display:flex;
+    justify-content: center;
+    min-width: 1200px;
+   }
+   
+}
+@media only screen and (max-width: 999px){
+    .box{
+    margin-left: 35px;
+   }
+   .box2{
+    margin-left: 35px;
+    height:auto;
+   }
+   .box3{
+    margin-left: 35px;
+   }
+   .box4{
+    margin-left: 150px;
+   }
+    .section-desc{
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .column_square {
+        flex: 1 1 100%; /* Full width for smaller screens */
+    }
+    .section-desc {
+        font-size: 1.1rem; /* Slightly smaller on narrow screens */
+        padding: 10px;
+        line-height: 1.6; /* Improves readability */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .box2 {
+        height: auto; /* Allows content to grow dynamically */
+        padding: 30px; /* Adds consistent spacing */
+    }
+}
+
+
 nav a:hover{
     background-color:rgb(250,250,250); 
 }
@@ -72,7 +129,7 @@ html{
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
-    gap:22px;
+    /* gap:22px; */
     text-align: left;
     padding-top: 80px;
 }
@@ -81,33 +138,31 @@ html{
     line-height: 4;
     text-align:left;
     display:inline-box;
-    position:absolute; left:300px;
+    width:400px;
+    margin-left:80px;
     
 }
 
-.pfp{
-    display:inline-block;
-    padding-left: 60%;
-}
 
 .image1{
     height:300px;
     float: right; 
+    margin-right: 50px;
 }
 
 /* about page */
 
 .box2{
     display:inline-block;
-    height:700px;
     width:1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
     gap:22px;
+    text-align: left;
+    height: 700px;
     padding-top: 30px;
 
-    text-align: left;
 }
 
 .infoaboutme{
@@ -119,7 +174,18 @@ html{
 .section-desc{
     padding-left:90px;
     padding-right:60px;
+    width:auto;
+    height:auto;
 }
+
+/* .section-desc {
+    font-size: clamp(1rem, 2vw, 1.5rem); 
+    line-height: 1.6; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    padding: 20px;
+} */
+
 .title{
     font-family: pixelb0ld;
     margin-left:90px;
@@ -136,7 +202,7 @@ html{
 }
 .box3{
     display:inline-block;
-    height: 2300px;
+    height: 5200px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
@@ -150,20 +216,39 @@ html{
     margin-bottom: 10px;
 }
 
-.row_square{
-    border:1px solid #000;
-    height: 750px;
+/* .row_square2{
+    height: 1100px;
     display:flex;
     justify-content:center;
+} */
+/* .row_square{ */
+    /* border:1px solid #000; */
+    /* height: 920px;
+    display:flex;
+    justify-content:center;
+} */
+
+.row_square, .row_square2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to new rows if needed */
+    justify-content: center;
+    align-items: flex-start; /* Aligns items to the top */
+    gap: 20px; /* Adds spacing between items */
 }
-.column_square{
-    height:750px;
+
+
+
+/* .column_square{
+    height:900px;
     width:500px;
-    /* border:1px solid #8f0303; */
-    /* display:flex;
-    justify-content: center; */
- 
+} */
+
+.column_square {
+    flex: 1 1 calc(50% - 20px); /* Allows columns to resize and fit within the row */
+    max-width: 500px; /* Prevents overly large columns */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
+
 .image_container{
     background-color: rgb(102, 81, 128);
     transition: all .3s ease-in-out;  
@@ -181,10 +266,19 @@ html{
     max-width: 100%;
     max-height: 100%;
 }
-.content_desc{
-    /* border:1px solid orangered; */
+.image_container img.image3{
+    width:500px;
+    height: auto;
+}
+/* .content_desc{
     width:auto;
     height:auto;
+} */
+
+.content_desc {
+    width: 100%;
+    height: auto; /* Adjusts height based on content */
+    padding: 10px; /* Adds spacing inside */
 }
 .buttongroup{
     /* border:1px solid blue; */
@@ -204,6 +298,14 @@ html{
     margin-top:5px;
     margin-right: 5px;
     cursor:not-allowed;
+}
+
+.wwbutton{
+    background-color: cadetblue;
+}
+
+.gdbutton{
+    background-color: rgb(82, 138, 195);
 }
 .javabutton{
     background-color: darkslateblue;
@@ -226,6 +328,22 @@ html{
 .unitybutton{
     background-color:#484848;
 }
+.ue5button{
+    background-color:#000;
+}
+.cppbutton{
+    background-color: #342c51;
+}
+.wipbutton{
+    background-color: #ff8484;
+}
+.blueprintbutton{
+    background-color: rgb(16, 16, 182);
+}
+
+.fmodbutton{
+    background-color: rgb(167, 29, 29);
+}
 ul{
     list-style-position: outside;
     line-height: 1.5;
@@ -234,6 +352,7 @@ ul{
 }
 li{
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 .image_container img.image3{
     object-fit: contain;
@@ -261,18 +380,7 @@ img.image5{
     border-radius: 5px;
     padding-top: 30px;
 }
-.arr_header{
-    /* display: flex;
-    justify-content: left; */
-    border:3px solid rgb(47,24,75);
-    border-radius: 3px;
-    width: 250px;
-    height: 30px;
-    margin-left: 70px;
-    text-align: center;
-    padding-top: 15px;
-    background-color: #F5F5F5;
-}
+
 
 img.image4{
     width:100px;
@@ -280,97 +388,120 @@ img.image4{
     border: 5px solid #E8E0E2;
     border-radius: 4px;
 }
-.album_title{
-    width:250px;
-    height:100px;
-    border: 4px solid rgba(0, 0, 0, 0.18);
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    background: #484848;
-    display: inline-block;
-    text-align: left;
-    color: #E8E0E2;
-    line-height: 2;
-    padding-left:10px;
-}
-.album_image{
-    display: inline-block;
-}
-.album_cover_container {
-    display: flex;
-    align-items: center; /* Vertically align the content */
-}
-.bg2{
-    background-color: #F5F5F5;
-    width: 360px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-}
-.track_body{
-    width: 90%;
-    max-width:300px;
-    padding-left:10px;
-    padding-right:10px;
-    padding-top:20px;
-    padding-bottom:20px;
-    box-shadow: 0 0 20px rgba(red, 0,0, 0.4);
-    background: rgba(217, 217, 217, 0.42);
-    margin-bottom: 16px;
-    margin-top: -30px;
 
-}
-.track_header{
-    padding-top: 24px;
-    font-size: 10px;
-    text-align:left;
-    padding-left: 30px;
-    color: #FFF;
-    font-family: regular;
-    font-weight: 100;
-}
-.track{
-    display: flex;
-    align-items: center;
-}
 
-.circle_button{
-    cursor: pointer;
-    margin-right: 20px; 
-    height: 41px;
-    width: 36px;
-    border: none;
-    background-color: inherit;
-}
-
-.track div{
-    flex: 1;
-}
-/* For First album  */
-.bg3{
-    background: linear-gradient(180deg, rgba(120, 117, 134, 0.95) 0%, #787586 43.75%);
-    width: 360px;
-}
-
-div.list{
-    counter-reset: list-number -1;
-    padding:30px;
-    text-align: left;
-    color:#fff;
-    font-size: 10px;
-}
-
-div.list div.track_number:before {
-
-  counter-increment: list-number 2;
-  content: counter(list-number) ".";
-  margin-bottom:16px;
-  width:20px;
-  height:35px;
-  display:inline-flex;
-  
-}
 .test{
     width: 300px;
     height:300px;
+}
+
+.box4{
+    display:inline-block;
+    height: 250px;
+    width: 900px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    padding-top: 30px;
+}
+
+.box4 .text{
+    text-align: left;
+    font-size: 16px;
+    margin-left: 5px;
+}
+.box4 .section-desc{
+    padding-left:50px;
+}
+
+
+.musicBody{
+    width: 1120px;
+    background-color: rgb(244,239,250);
+    border:3px solid #000;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column;
+
+}
+
+/* Style the spectrum column */
+.spectrum-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between tracks */
+    width: 90%; /* Optional: Limit column width */
+    max-width: 800px; /* Adjust for a horizontal layout */
+    font-family: monospace;
+}
+
+/* Style each track container */
+.spectrum-container {
+    display: flex; /* Horizontal layout */
+    align-items: center;
+    background-color: rgb(204, 183, 206);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.control-bar {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.control-bar button {
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-out;
+    background-color: rgb(253, 253, 253);
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.control-bar button:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+/* Track info and waveform alignment */
+.track-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.track-info h3 {
+    margin: 5px 0px;
+    font-size: 18px;
+}
+
+.track-info p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    padding-bottom: 10px;
+}
+
+/* Style the music icon */
+.track-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px; /* Space between icon and track info */
+}
+
+/* Waveform styling */
+.waveform {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
 }
