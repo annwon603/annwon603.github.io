@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="https://unpkg.com/wavesurfer.js@7"></script>
-    <script src="javascript/myscript.js"></script>
+    <!-- <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="javascript/myscript.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
-<body>
+    <body>
         <header class="header">
             <nav>
                 <a href="#home">Home</a>
                 <a href="#aboutme">About Me</a>
                 <a href="#projects">Projects</a>
-                <a href="page2.html">Music</a>
+                <a href="#music">Music</a>
                 <a href="https://drive.google.com/file/d/1ANwfHSZ2n5jkwFKwqPjBma5mPsoh70Vm/view?usp=sharing">Resume</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -343,6 +344,154 @@
             </div>
         </div>   
         </section>
+        <section id = "music">
+            <div class = "musicBody">
+                <div class = "center">
+                    <div class = "project_header"> Music </div>
+                    <div class = "smalldetail">
+                        <h3> Songs I produced and composed </h3>
+                    </div>
+                </div>
+                <div class = "spectrum-column">
+                    <div class="spectrum-container">
+                        <img src="images/dontspaceouticon.png" alt="Track 1 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Intro</h3>
+                                <p>Produced for the title starting screen of "Don't Space Out" <br>
+                                    Inspired by retro 8 bits games 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform1"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/libraryicon.PNG" alt="Track 2 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Boss Battle</h3>
+                                <p>Co-Produced and Co-Arranged for "Athenaeum" <br>
+                                    Produced the cultist motif and pitch the game to have an orchestral soundtrack to match its mystical theme
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform2"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/Meow.png" alt="Track 3 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Bossa Meowva</h3>
+                                <p>Produced for "Meow Around and Find Out" <br>
+                                    Experimenting with a plugin MeowSynth to create a bossa nova 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform3"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/ConjuringIcon.png" alt="Track 4 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Cafe Lofi</h3>
+                                <p>Co-produced and Co-arranged for "Conjuring Cafe" <br>
+                                    In charge with the sound design and music for the game 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform4"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/Chicken.png" alt="Track 5 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Chicken</h3>
+                                <p>Produced for "Draggin Eggs" <br>
+                                    Inspired by the game "Animal Crossing" to deliver both cute and cozy atmosphere for "Draggin Eggs" 
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform5"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/cave.png" alt="Track 6 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Cave</h3>
+                                <p>Produced for the cave map of "Hyperbike Exploration" <br>
+                                    The track was inspired by Minecraft caves and Genshin Impact's Dragonspine
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform6"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/evil.png" alt="Track 7 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Intro</h3>
+                                <p>Produced for "Evil Incarnate" <br>
+                                    The track was inspired by Jordan Peele's "US"
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform7"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spectrum-container">
+                        <img src="images/evil.png" alt="Track 8 Icon" class="track-icon">
+                        <div class="track-content">
+                            <div class="track-info">
+                                <h3>Background</h3>
+                                <p>Produced for "Evil Incarnate" <br>
+                                    The track was inspired by Jordan Peele's "US"
+                                </p>
+                            </div>
+                            <div class="waveform" id="waveform8"></div>
+                            <div class="control-bar">
+                                <button class="btn-play"><i class="fa-solid fa-play fa-xl"></i></button>
+                                <button class="btn-pause" disabled><i class="fa-solid fa-pause fa-xl"></i></button>
+                                <button class="btn-stop" disabled><i class="fa-solid fa-stop fa-xl"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="contact">
             <div class="center">
                 <div class="box4"> Feel Free to Contact Me!!
@@ -356,6 +505,8 @@
                 </div>
             </div>
         </section>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/wavesurfer@1.3.4/dist/wavesurfer.min.js"></script>
+        <script src="javascript/myscript.js"></script>
+    </body>
 </html>
 

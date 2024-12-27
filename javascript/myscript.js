@@ -1,9 +1,13 @@
 // Array of track data
 const tracks = [
-    { id: "waveform1", url: "media/Chase Me.mp3" },
-    { id: "waveform2", url: "media/Deja Vu.mp3" },
-    { id: "waveform3", url: "media/Piri.mp3" },
-    { id: "waveform4", url: "media/Poison Love.mp3"}
+    { id: "waveform1", url: "media/8bitIntro.wav" },
+    { id: "waveform2", url: "media/bossBattle.wav" },
+    { id: "waveform3", url: "media/BossaNovaMeow.wav" },
+    { id: "waveform4", url: "media/cafe-lofi-2.wav"},
+    { id: "waveform5", url: "media/Chicken.mp3"},
+    { id: "waveform6", url: "media/cavebeat.wav"},
+    { id: "waveform7", url: "media/Title_Intro_project.wav"},
+    { id: "waveform8", url: "media/background_loop.wav"}
 ];
 
 // Keep track of the currently playing spectrum
@@ -22,7 +26,7 @@ tracks.forEach((track) => {
         cursorColor: "#FFFFFF",
         cursorWidth: 3,
         normalize: true,
-        hideScrollBar: true
+        hideScrollbar: true
     });
 
     // Load the track
