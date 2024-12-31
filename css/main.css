@@ -32,15 +32,19 @@ body{
 }
 
 
-nav{
+nav {
     text-align: center;
-    margin-top:10px;
-    min-width:700px;
+    margin-top: 10px;
+    width: 100%; /* Allow the navigation to be responsive */
+    max-width: 1120px; /* Set max-width to avoid overflow */
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center; /* Ensure items are centered */
     gap: 10px;
+    padding: 0 10px; /* Adds padding to prevent items from touching edges */
 }
+
 nav a{
     background-color: rgb(244,239,250);
     border:3px solid rgb(47,24,75);
@@ -53,6 +57,7 @@ nav a{
     padding: 10px 1px;
     margin-top: 10px;
     margin-bottom:10px;
+    text-align: center;
 
 }
 /* made it responsive */
