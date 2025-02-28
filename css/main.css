@@ -103,6 +103,7 @@ nav a{
     .box2 {
         height: auto; /* Allows content to grow dynamically */
         padding: 30px; /* Adds consistent spacing */
+        font-size: small;
     }
 }
 
@@ -163,22 +164,28 @@ html{
 /* about page */
 
 .box2{
-    display:inline-block;
+    display:flexbox;
+    justify-content: center;
+    align-self: center;
     width:1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
     gap:22px;
-    text-align: left;
+    /* text-align: cen; */
     height: 700px;
     padding-top: 30px;
 
 }
 
 .infoaboutme{
-    text-align:left;
-    display:inline-box;
-    margin-left: 90px;
+    text-align: center;
+    /* display: flexbox;
+    flex-direction: column; */
+
+    /* justify-content: center;
+    align-content: center; */
+    /* margin-left: 90px; */
 }
 
 .section-desc{
@@ -186,6 +193,7 @@ html{
     padding-right:60px;
     width:auto;
     height:auto;
+    text-align: left;
 }
 
 /* .section-desc {
@@ -198,7 +206,7 @@ html{
 
 .title{
     font-family: pixelb0ld;
-    margin-left:90px;
+    /* margin-left:90px; */
 }
 .text{
     line-height: 3;
