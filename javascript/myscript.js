@@ -7,7 +7,8 @@ const tracks = [
     { id: "waveform5", url: "media/Chicken.mp3"},
     { id: "waveform6", url: "media/cavebeat.wav"},
     { id: "waveform7", url: "media/Title_Intro_project.wav"},
-    { id: "waveform8", url: "media/background_loop.wav"}
+    { id: "waveform8", url: "media/background_loop.wav"},
+    { id: "waveform9", url: "media/dream_reality_cloud.wav"}
 ];
 
 // Keep track of the currently playing spectrum
