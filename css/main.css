@@ -220,7 +220,7 @@ html{
 }
 .box3{
     display:inline-block;
-    height: 4600px;
+    height: 6000px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
@@ -234,18 +234,6 @@ html{
     margin-bottom: 10px;
 }
 
-/* .row_square2{
-    height: 1100px;
-    display:flex;
-    justify-content:center;
-} */
-/* .row_square{ */
-    /* border:1px solid #000; */
-    /* height: 920px;
-    display:flex;
-    justify-content:center;
-} */
-
 .row_square, .row_square2 {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping to new rows if needed */
@@ -254,12 +242,6 @@ html{
     gap: 20px; /* Adds spacing between items */
 }
 
-
-
-/* .column_square{
-    height:900px;
-    width:500px;
-} */
 
 .column_square {
     flex: 1 1 calc(50% - 20px); /* Allows columns to resize and fit within the row */
