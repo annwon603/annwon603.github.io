@@ -13,7 +13,8 @@ const tracks = [
     { id: "waveform11", url: "media/ConstructionScream_6+dBFS.wav"},
     { id: "waveform12", url: "media/botanicaAttempt.wav"},
     { id: "waveform13", url: "media/HeartwoodSiblingFight-Master Ver5.wav"},
-    { id: "waveform14", url: "media/HeartwoodTitleTheme-Mastered_Ver3.wav"}
+    { id: "waveform14", url: "media/HeartwoodTitleTheme-Mastered_Ver3.wav"},
+    { id: "waveform15", url: "media/HeartwoodIntroCutsceneMix16bit.wav"}
 ];
 
 // Keep track of the currently playing spectrum
