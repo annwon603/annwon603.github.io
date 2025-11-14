@@ -11,7 +11,9 @@ const tracks = [
     { id: "waveform9", url: "media/dream_reality_cloud.wav"},
     { id: "waveform10", url: "media/ragtimeyfull.wav"},
     { id: "waveform11", url: "media/ConstructionScream_6+dBFS.wav"},
-    { id: "waveform12", url: "media/botanicaAttempt.wav"}
+    { id: "waveform12", url: "media/botanicaAttempt.wav"},
+    { id: "waveform13", url: "media/HeartwoodSiblingFight-Master Ver5.wav"},
+    { id: "waveform14", url: "media/HeartwoodTitleTheme-Mastered_Ver3.wav"}
 ];
 
 // Keep track of the currently playing spectrum
