@@ -135,14 +135,14 @@ html{
 /* home page */
 .box{
     display:inline-block;
-    height:500px;
+
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
-    /* gap:22px; */
     text-align: left;
     padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 .intro{
@@ -173,8 +173,8 @@ html{
     border-radius: 5px;
     gap:22px;
     /* text-align: cen; */
-    height: 700px;
     padding-top: 30px;
+    padding-bottom: 40px;
 
 }
 
@@ -220,12 +220,12 @@ html{
 }
 .box3{
     display:inline-block;
-    height: 6000px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
     padding-top: 30px;
+    padding-bottom: 30px;
 
 }
 .project_header{
@@ -373,12 +373,12 @@ img.image5{
 /* music page */
 .box4{
     display:inline-block;
-    height: 1000px;
     width: 1120px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
     border-radius: 5px;
     padding-top: 30px;
+    padding-bottom: 60px;
 }
 
 
@@ -397,7 +397,6 @@ img.image4{
 
 .box4{
     display:inline-block;
-    height: 250px;
     width: 900px;
     background-color: rgb(244,239,250);
     border:3px solid #000;
@@ -421,7 +420,7 @@ img.image4{
     border:3px solid #000;
     border-radius: 5px;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
