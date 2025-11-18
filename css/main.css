@@ -149,7 +149,7 @@ html{
     line-height: 4;
     text-align:left;
     display:inline-box;
-    width:400px;
+    /* width:400px; */
     margin-left:80px;
     
 }
@@ -180,12 +180,6 @@ html{
 
 .infoaboutme{
     text-align: center;
-    /* display: flexbox;
-    flex-direction: column; */
-
-    /* justify-content: center;
-    align-content: center; */
-    /* margin-left: 90px; */
 }
 
 .section-desc{
@@ -195,15 +189,9 @@ html{
     height:auto;
     text-align: left;
 }
-
-/* .section-desc {
-    font-size: clamp(1rem, 2vw, 1.5rem); 
-    line-height: 1.6; 
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    padding: 20px;
-} */
-
+p + p {
+    margin-top: 20px;
+}
 .title{
     font-family: pixelb0ld;
     /* margin-left:90px; */
