@@ -19,6 +19,17 @@
     src:url(../fonts/dogicapixelbold.ttf)
 }
 
+.highlight{
+    font-style: italic;
+    font-weight: bold;
+    color:#854b88
+}
+
+.highlight-no-italic{
+    font-weight: bold;
+    color:#854b88
+}
+
 body{
     background-color:rgb(200, 177, 228);
     display: flex;
