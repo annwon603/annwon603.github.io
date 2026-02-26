@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="css/aboutme.css">
+    <!-- <script src="https://unpkg.com/wavesurfer.js@7"></script>
+    <script src="javascript/myscript.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <button id="menu-btn" class="menu-btn">☰</button>
+        <nav>
+            <div id="myLinks">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#reel">Audio Reel</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#music">Music</a>
+                <a href="https://drive.google.com/file/d/1PyIts4FWpkEkcvf5cjQL6u5zALH28Ekn/view?usp=sharing">Resume</a>
+                <a href="index.html#contact">Contact</a>
+                <a href="aboutme.html">About Me</a>
+            </div>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <div class = "box">
+        <h1> About Me </h1> 
+        <p> I'm a recent college graduate student at UCSD.
+        Before college, I spend 24/7 gaming, watching anime, 
+        and listening and making music. During quarantine, I got into game-making and coding through <i>Minecraft</i>.
+        I created <a href="https://www.planetminecraft.com/project/welcome-to-the-dreamworld/"><b>my first adventure map</b></a> 
+        , a horror-puzzle-music story game, which sparked my passion for
+        <span class = "highlight"> game development </span>
+        <br><br>
+        I'm into games that have compelling story such as <span class = "highlight">Life is Strange</span> and <span class = "highlight">Detroit: Become Human</span>.
+        I also enjoy playing action-adventure games w/ unqiue lore such as <span class = "highlight">Assassin Creed</span> and <span class = "highlight">Genshin Impact</span>.
+        I also like to play horror-puzzle games such as <span class = "highlight">Ib, Omori, and Catherine.</span> <br> 
+        <br>
+        I'm hoping in the future I can contribute to developing games in all of my favorite genres. <br>
+        I'm also interested in doing either scoring or sound designing for TV/Films in similar genre.
+        </p>
+    </div>
+
+    <script>
+    function myFunction() {
+    var x = document.getElementById("myLinks");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    }
+    }
+</script>
+
+</body>

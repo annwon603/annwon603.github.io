@@ -64,7 +64,7 @@ nav a{
     color:rgb(47,24,75);
     font-family: regular;
     font-size: smaller;
-    width:145px;
+    width: 9.45vmax;
     padding: 10px 1px;
     margin-top: 10px;
     margin-bottom:10px;
@@ -132,12 +132,15 @@ html{
 #contact,
 #projects,
 #music,
+#reel
 #resume{ 
     font-family:regular;
     margin-bottom: 15px;
+
 }
 .header{
     font-size: small;
+    font-family:regular;
 }
 
 .center{
@@ -186,6 +189,7 @@ html{
     /* text-align: cen; */
     padding-top: 30px;
     padding-bottom: 40px;
+    margin-bottom: 15px;
 
 }
 
