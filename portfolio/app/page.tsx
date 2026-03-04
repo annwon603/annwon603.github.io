@@ -1,4 +1,36 @@
 import Image from "next/image";
+import localFont from "next/font/local"
+
+// const dogica = localFont({
+//     src:[
+//     {
+//         path: './fonts/dogica.ttf',
+//         weight: '400',
+//         style: 'normal',
+//     },
+//     {
+//         path: './fonts/dogicalbold.ttf',
+//         weight: '700',
+//         style: 'italic',
+//     },
+//     ],
+
+// })
+
+// const dogicaPixel = localFont({
+//     src: [
+//         {
+//         path: './fonts/dogicapixel.ttf',
+//         weight: '400',
+//         style: 'pixel',
+//         },
+//         {
+//             path:'./fonts/dogicalpixelbold.ttf',
+//             weight: '700',
+//             style: 'pixelbold',
+//         },
+//     ],
+// })
 
 export default function Home() {
   return (
