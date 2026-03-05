@@ -13,7 +13,7 @@ const space_mono = Space_Mono({
 
 const HeroSection = () => {
     return (
-        <div className="w-full max-w-4xl mx-auto p-4 mb-24 flex flex-col">
+        <div className="w-full max-w-4xl mx-auto p-4 mb-24 flex flex-col container">
             <h1 className={`${space_mono.className} text-[#2E2C39] text-center md:text-2xl sm:text-xl mb-6`}> Audio Reel </h1>
             <iframe className = "w-full aspect-video rounded-md shadow-md"
                 src="https://www.youtube.com/embed/y6andxJkh7g?si=a9Gu-qyYqeWDPINp" 
