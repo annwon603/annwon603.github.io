@@ -69,7 +69,7 @@ const navLinks = [
 const NavBar = () => {
     const [navbarOpen,setNavbarOpen] = useState(false);
     return (
-        <nav className = "fixed top-0 left-0 right-0 z-10  bg-[rgb(231,227,241)]">
+        <nav className = "fixed top-0 left-0 right-0 z-10  bg-[#FFFFFF]">
             <div className = "flex flex-wrap item-center justify-between mx-auto py-4 px-4">
                 {/* Mobile View */}
                 <div className="mobile-menu block md:hidden flex items-center w-full relative">

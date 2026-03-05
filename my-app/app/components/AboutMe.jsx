@@ -35,14 +35,15 @@ const dogicaPixel = localFont({
     ]
 })
 
-//TO DO: Make this responsive for phone
-const HomeSection = () => {
+
+const AboutMeSection = () => {
   return (
     // Outer wrapper acting as your "Group 13/18/19" frame
     <div className="">
     {/* // We use a relative container scaled to your design's approximate size */}
-        <div className="relative w-full max-w-225 h-125 mx-auto mt-10 mb-10 filter drop-shadow-sm font-['Dogica_Pixel']">
-        
+        {/* Desktop View */}
+        <div className="hidden md:block relative w-full max-w-225 h-125 mx-auto mt-10 mb-10 filter drop-shadow-sm font-['Dogica_Pixel']">
+
             {/* Big Main Window (Rectangle 74/75) */}
             <div className="bg-[#EDEDED] border-[#6D6D6D] h-120 border-2 w-180 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                 <RetroWindow width="695px" height="452px" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-sm z-10">
@@ -94,9 +95,55 @@ const HomeSection = () => {
             </div>
 
         </div>
+        {/* Phone View */}
+        <div className="mobile-menu md:hidden flex flex-col items-center justify-center mx-4 my-10 gap-4">
+            <div className="bg-white border-[#2E2C39] border-2">
+                <p className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-center py-2 px-4`}> 
+                    This is Annie Wong 
+                </p>
+            </div>
+            <div className="bg-[#EDEDED] border-[#6D6D6D] border-2 m-4">
+                <RetroWindow width= "326px" height = "283px" className="shadow-sm z-9 m-1 flex flex-col relative">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#EDEDED] to-[#ACACAC] opacity-20 pointer-events-none" />
+                
+                    <div className="flex flex-row items-stretch justify-center gap-3 p-3 relative z-10 h-full">
+
+                        <div className="bg-white border-[#D9D9D9] border-2 rounded-lg w-1/3 flex justify-center h-1/4 p-2">
+                            <p className={`${dogicaPixel.className} text-[#2E2C39] text-left text-[10px] leading-3`}>
+                                Welcome to my Portfolio!
+                            </p>
+                        </div>
+
+                        <div className="w-3/4">
+                            <Image src={Pfp} alt="Annie Wong" fill className="object-contain"/>
+                        </div>
+                        
+                    </div>
+                
+                </RetroWindow>
+            </div>
+
+            <RetroWindow title="ABOUT ME" width="268px" height="110px" className="mb-3">
+                    <div className="p-3">
+                        <p className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-sm mx-1 tracking-tighter`}>
+                            Recent UCSD grad majoring in ICAM-Music!!
+                        </p>
+                    </div>
+            </RetroWindow>
+
+            <RetroWindow title="MY ROLE" width="268px" height="125px">
+                <div className="p-3">
+                    <p className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-sm/4.5 mx-1 tracking-tighter`}>
+                        Sound designer, audio implementer, composer, and music producer.
+                    </p>
+                </div>
+            </RetroWindow>
+
+
+        </div>
     </div>
   );
 }
 
-export default HomeSection;
+export default AboutMeSection;
 
