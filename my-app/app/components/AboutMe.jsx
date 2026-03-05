@@ -36,22 +36,17 @@ const HomeSection = () => {
         <section>
             <div className = "grid grid-cols-2 lg: grid-cols-12">
                 <div className = "col-span-7">
-                    <h1 className={`${dogicaPixel.className} text-[#2E2C39] mb-8 text-4xl font-bold`}>
-                        Hello!
+                    <h1 className={`${dogicaPixel.className} text-[#2E2C39] mb-8 text-1xl font-bold`}>
+                        This is Annie Wong
                     </h1>
-                    <p className = {`${dogicaPixel.className} text-[#2E2C39] text-2xl leading-7 mb-4 font-normal`}>
+                    <p className = {`${dogicaPixel.className} text-[#2E2C39] text-1xl leading-7 mb-4 font-normal`}>
                         Welcome to my portfolio!
                     </p>
-                    <p className = "text-[#2E2C39] text-2xl leading-7 mb-7.5">
-                        My name is Annie Wong and I'm a recent UCSD grad. 
+                    <p className = {`${dogicaPixel.className} text-[#2E2C39] text-1xl leading-7 mb-7.5 font-bold`}>
+                        Recent UCSD grad majoring in ICAM-Music. 
                     </p>
-                    <p className = "text-[#2E2C39] text-2xl leading-7 mb-8">
-                        I'm a <i>sound designer, audio implementator, composer,</i> and 
-                        <i> music producer.</i>
-                    </p>
-                    <p className = "text-[#2E2C39] text-2xl leading-7">
-                        I spend my free time watching anime, listening to and making music, and playing
-                        story-telling games (Fav Game: Life is Strange, Detroit: Become Human, Omori, + more)!
+                    <p className = {`${dogicaPixel.className} text-[#2E2C39] text-sm leading-7 mb-7.5 font-bold`}>
+                        Sound designer, audio implementator, composer and music producer.
                     </p>
                 </div>
 
