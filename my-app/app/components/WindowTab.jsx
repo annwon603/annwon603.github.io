@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-
-const RetroWindow = ({ title, width, height, className = '', children }) => {
+ 
+const RetroWindow = ({ title, width, height, className = '', children, onClose }) => {
   return (
     <div className={`border border-[#6D6D6D] bg-[#EDEDED] flex flex-col ${className}`}
       style={{ width, height }}>
@@ -13,9 +13,15 @@ const RetroWindow = ({ title, width, height, className = '', children }) => {
           </span>
         )}
         {/* Close Button */}
-        <button className="w-4.75 h-4.75 bg-[#D9D9D9] border border-[#6D6D6D] text-[#4F4F4F] text-[11px] font-bold flex items-center justify-center">
+        {onClose && (
+          <button 
+            onClick={onClose}
+            className="w-4.75 h-4.75 bg-[#D9D9D9] border border-[#6D6D6D] text-[#4F4F4F] text-[11px] 
+            font-bold flex items-center justify-center cursor-pointer hover:bg-[#2E2C39] hover:opacity-90">
           x
-        </button>
+          </button>
+        )}
+
       </div>
       {/* Window Content */}
       <div className="flex-1 relative">

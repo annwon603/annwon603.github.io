@@ -95,6 +95,7 @@ const NavBar = () => {
                  <p className="sm:text-center py-2 pl-3 pr-4">Annie Wong</p>
                 </Link>
                 
+                {/*Links to section of the website Desktop View*/}
                 <div className = "menu hidden md:block md:w-auto md:space-x-8 mt-0" id="navbar">
                     <ul className="flex p-4 md:04 md:flex-row">
                         {

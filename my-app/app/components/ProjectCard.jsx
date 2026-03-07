@@ -1,8 +1,10 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
 import {LinkIcon, InformationCircleIcon} from "@heroicons/react/24/outline";
 import localFont from "next/font/local";
 import {Rubik,Space_Mono} from 'next/font/google';
 import Link from "next/link";
+import Modal from "./Modal";
 
 const rubik = Rubik({
     subsets: ['latin'],
@@ -55,7 +57,7 @@ const codeColors = {
     "Unreal Engine 5" : "bg-[#D2E5EF]",
     "Unity C#" : "bg-[#E7D2EF]",
     "FMOD" : "bg-[#D2E5EF]",
-    "WWise" : "bg-[#E3D4D9]"
+    "Wwise" : "bg-[#CACC9E]"
 }
 
 
@@ -64,6 +66,11 @@ const codeColors = {
     {/* 3. iPad Pro / Laptop: lg:h-[400px] (Portrait iPad Pro) */}
     {/* 4. Large Desktop: xl:h-[500px] (Landscape iPad Pro / Big Screens) */}
 const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDescription}) => {
+    const [showModal,setShowModal] = useState(false);
+    const handleShowModal = () => {
+        setShowModal(!showModal);
+    }
+
     return(
         <div>
             <div
@@ -71,42 +78,120 @@ const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDesc
                 bg-cover bg-center bg-no-repeat my-4 relative group rounded-md shadow-sm" 
                 style={{backgroundImage: `url(${imgURL})`}}
             >
-                <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full rounded-md
-                    bg-[#181818] opacity-0 hidden 
-                    group-hover:flex group-hover:opacity-80
-                    transition-duration-500">
+                {/* {Desktop View for direct link and popup} */}
+                <div className="hidden xl:block">
+                    <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full rounded-md
+                        bg-[#181818] opacity-0 hidden 
+                        group-hover:flex group-hover:opacity-80
+                        transition-duration-500">
+                        {/* Direct Link */}
                         <Link 
                             href={directURL} 
-                            className="h-14 w-14 border-2 mr-6 relative rounded-full border-[#c39fcb] hover:border-white group/link">
+                            className="h-14 w-14 mr-6 relative rounded-full bg-[#AFA3D5] group/link">
 
-                            <LinkIcon className="h-10 w-10 text-[#c39fcb] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                            <LinkIcon className="h-10 w-10 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
                             -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
                             </LinkIcon>
                             
                         </Link>
-                        <Link href="/" className="h-14 w-14 border-2 relative rounded-full border-[#c39fcb] hover:border-white group/link">
-                            <InformationCircleIcon className="h-10 w-10 text-[#c39fcb] absolute top-1/2 left-1/2 transform -translate-x-1/2 
-                            -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
+                        {/* Full Description*/}
+
+                        <button onClick={handleShowModal} className="h-14 w-14 relative rounded-full bg-[#AFA3D5] group/link">
+                            <InformationCircleIcon 
+                                className="h-10 w-10 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                                -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
                             </InformationCircleIcon>
-                        </Link>
+                        </button>
+                    </div>
                 </div>
             </div>
 
             <div className="text-[#2E2C39] mt-1">
-                <h5 className={`${dogicaPixel.className}`}>{title}</h5>
+                <div className="flex flex-wrap justify-between xl:hidden">
+                    <h5 className={`${dogicaPixel.className}`}>{title}</h5>
+                </div>
+                {/* Mobile View for Direct Link and Popup */}
+                {/* <div className="flex flex-wrap justify-between xl:hidden">
+                    <h5 className={`${dogicaPixel.className}`}>{title}</h5>
+                    <div className="md:w-auto">
+                        <div className="flex flex-row">
+
+                            <Link 
+                            href={directURL} 
+                            className="h-7 w-7 mr-1.5 relative rounded-full bg-[#E7E3F1] group/link">
+
+                            <LinkIcon className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                                -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
+                            </LinkIcon>
+                            
+                            </Link>
+
+
+                            <button onClick={handleShowModal} className="h-7.5 w-7.5 relative rounded-full bg-[#E7E3F1] group/link">
+                                <InformationCircleIcon 
+                                    className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                                    -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
+                                </InformationCircleIcon>
+                            </button>
+                        </div>
+                    </div>
+                </div> */}
+                {/* Desktop view for Direct Link and Popup */}
+                <h5 className={`${dogicaPixel.className} hidden xl:block`}>{title}</h5>
                 <p className={`${rubik.className} my-2`}>{description}</p>
+                
             </div>
             {/*Button */}
-            <div className="flex flex-row flex-wrap gap-2 mt-4">
+             <div className="flex justify-between xl:hidden mt-4">
+                <div className="flex flex-row flex-wrap gap-2 ">
+                    {codeStack.map((code,index) => {
+                        const dynamicClass = codeColors[code] || "bg-[#E3D4D9] text-[#2E2C39]";
+                        return(
+                        <span key={index} className={`${space_mono.className} border-2 rounded-lg p-1 px-2 border-[#6D6D6D] text-[#6D6D6D] ${dynamicClass}`}>
+                            {code}
+                        </span>
+                    );
+                    })}
+                    
+                </div>   
+                    <div className="md:w-auto">
+                        <div className="flex flex-row">
+
+                            <Link 
+                            href={directURL} 
+                            className="h-8.75 w-8.75 mr-3 relative rounded-full bg-[#E7E3F1] group/link">
+
+                            <LinkIcon className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                                -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
+                            </LinkIcon>
+                            
+                            </Link>
+
+
+                            <button onClick={handleShowModal} className="h-9 w-9 relative rounded-full bg-[#E7E3F1] group/link">
+                                <InformationCircleIcon 
+                                    className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
+                                    -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
+                                </InformationCircleIcon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            {/* <div className="flex flex-row flex-wrap gap-2 mt-4">
                 {codeStack.map((code,index) => {
-                    const dynamicClass = codeColors[code] || "bg-[#EDEDED] text-[#2E2C39]";
+                    const dynamicClass = codeColors[code] || "bg-[#E3D4D9] text-[#2E2C39]";
                     return(
                     <span key={index} className={`${space_mono.className} border-2 rounded-lg p-1 px-2 border-[#6D6D6D] text-[#6D6D6D] ${dynamicClass}`}>
                         {code}
                     </span>
                 );
                 })}
-            </div>   
+                
+            </div>    */}
+            {/* Modal breaks free of constraint inside the card */}
+            {showModal && <Modal 
+                handleShowModal={handleShowModal} 
+                descriptionList={fullDescription} />}
         </div>
     )
 }
