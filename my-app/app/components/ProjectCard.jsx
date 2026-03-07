@@ -107,12 +107,9 @@ const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDesc
             </div>
 
             <div className="text-[#2E2C39] mt-1">
-                <div className="flex flex-wrap justify-between xl:hidden">
-                    <h5 className={`${dogicaPixel.className}`}>{title}</h5>
-                </div>
                 {/* Mobile View for Direct Link and Popup */}
-                {/* <div className="flex flex-wrap justify-between xl:hidden">
-                    <h5 className={`${dogicaPixel.className}`}>{title}</h5>
+                <div className="flex flex-wrap justify-between xl:hidden">
+                    <h5 className={`${dogicaPixel.className} mt-0.5`}>{title}</h5>
                     <div className="md:w-auto">
                         <div className="flex flex-row">
 
@@ -135,49 +132,14 @@ const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDesc
                             </button>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 {/* Desktop view for Direct Link and Popup */}
                 <h5 className={`${dogicaPixel.className} hidden xl:block`}>{title}</h5>
                 <p className={`${rubik.className} my-2`}>{description}</p>
                 
             </div>
             {/*Button */}
-             <div className="flex justify-between xl:hidden mt-4">
-                <div className="flex flex-row flex-wrap gap-2 ">
-                    {codeStack.map((code,index) => {
-                        const dynamicClass = codeColors[code] || "bg-[#E3D4D9] text-[#2E2C39]";
-                        return(
-                        <span key={index} className={`${space_mono.className} border-2 rounded-lg p-1 px-2 border-[#6D6D6D] text-[#6D6D6D] ${dynamicClass}`}>
-                            {code}
-                        </span>
-                    );
-                    })}
-                    
-                </div>   
-                    <div className="md:w-auto">
-                        <div className="flex flex-row">
-
-                            <Link 
-                            href={directURL} 
-                            className="h-8.75 w-8.75 mr-3 relative rounded-full bg-[#E7E3F1] group/link">
-
-                            <LinkIcon className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
-                                -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
-                            </LinkIcon>
-                            
-                            </Link>
-
-
-                            <button onClick={handleShowModal} className="h-9 w-9 relative rounded-full bg-[#E7E3F1] group/link">
-                                <InformationCircleIcon 
-                                    className="h-5 w-5 text-[#2E2C39] absolute top-1/2 left-1/2 transform -translate-x-1/2 
-                                    -translate-y-1/2 cursor-pointer group-hover/link:text-white ">
-                                </InformationCircleIcon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            {/* <div className="flex flex-row flex-wrap gap-2 mt-4">
+            <div className="flex flex-row flex-wrap gap-2 mt-4">
                 {codeStack.map((code,index) => {
                     const dynamicClass = codeColors[code] || "bg-[#E3D4D9] text-[#2E2C39]";
                     return(
@@ -186,8 +148,7 @@ const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDesc
                     </span>
                 );
                 })}
-                
-            </div>    */}
+            </div>   
             {/* Modal breaks free of constraint inside the card */}
             {showModal && <Modal 
                 handleShowModal={handleShowModal} 

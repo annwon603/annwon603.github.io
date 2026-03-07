@@ -42,11 +42,11 @@ const AboutMeSection = () => {
     <div className="">
     {/* // We use a relative container scaled to your design's approximate size */}
         {/* Desktop View */}
-        <div className="hidden md:block relative w-full max-w-225 h-125 mx-auto mt-10 mb-10 filter drop-shadow-sm font-['Dogica_Pixel']">
+        <div className="hidden md:flex justify-center item-center relative w-full max-w-225 mx-auto  filter drop-shadow-sm font-['Dogica_Pixel']">
 
             {/* Big Main Window (Rectangle 74/75) */}
-            <div className="bg-[#EDEDED] border-[#6D6D6D] h-120 border-2 w-180 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <RetroWindow width="695px" height="452px" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 shadow-sm z-10">
+            <div className="bg-[#EDEDED] border-[#6D6D6D] border-2 p-4 my-24">
+                <RetroWindow width="695px" height="452px" className="justify-center item-center shadow-sm z-10">
                     {/* Inner gradient background */}
                     <div className="absolute inset-0 bg-gradient-to-br from-[#EDEDED] to-[#ACACAC] opacity-20 pointer-events-none" />
 
@@ -96,7 +96,7 @@ const AboutMeSection = () => {
 
         </div>
         {/* Phone View */}
-        <div className="mobile-menu md:hidden flex flex-col items-center justify-center mx-4 my-10 gap-4">
+        <div className="mobile-menu md:hidden flex flex-col items-center justify-center mx-4 my-10 gap-4 py-10">
             <div className="bg-white border-[#2E2C39] border-2">
                 <p className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-center py-2 px-4`}> 
                     This is Annie Wong 

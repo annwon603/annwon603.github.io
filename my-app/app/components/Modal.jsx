@@ -29,7 +29,7 @@ const dogicaPixel = localFont({
 const Modal = ({ handleShowModal ,  descriptionList}) => {
     return(
         <div 
-            className="w-full h-full fixed px-100 left-0 z-50 top-0 backdrop-filter backdrop-brightness-60 backdrop-blur-md flex justify-center items-center"
+            className="w-full h-full fixed px-10 xl:px-100 left-0 z-50 top-0 backdrop-filter backdrop-brightness-60 backdrop-blur-md flex justify-center items-center"
             onClick={handleShowModal}
         >
             <div onClick={(e) => e.stopPropagation()}>

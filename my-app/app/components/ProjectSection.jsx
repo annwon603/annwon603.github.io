@@ -147,8 +147,8 @@ const projectData = [
 
 const ProjectSection = () => {
     return(
-        <div className="mx-4 sm:mx-10 md:mx-40 my-20">
-            <h2 className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-lg`}>
+        <div className="mx-4 sm:mx-10 md:mx-40 my-4 md:my-10 xl:my-15">
+            <h2 className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-2xl`}>
                 Projects 
             </h2>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 mt-6">
