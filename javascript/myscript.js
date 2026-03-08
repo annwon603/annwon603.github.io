@@ -1,39 +1,98 @@
-// import WaveSurfer from "wavesurfer.js";
+// Array of track data
+const tracks = [
+    { id: "waveform1", url: "media/8bitIntro.wav" },
+    { id: "waveform2", url: "media/bossBattle.wav" },
+    { id: "waveform3", url: "media/BossaNovaMeow.wav" },
+    { id: "waveform4", url: "media/cafe-lofi-2.wav"},
+    { id: "waveform5", url: "media/Accusation Mastered Ver1.wav"},
+    { id: "waveform6", url: "media/Pier 12.3 Master FINAL.wav"},
+    { id: "waveform7", url: "media/ElectroSwing.wav"},
+    { id: "waveform8", url: "media/background_loop.wav"},
+    { id: "waveform9", url: "media/dream_reality_cloud.wav"},
+    { id: "waveform10", url: "media/ragtimeyfull.wav"},
+    { id: "waveform11", url: "media/ConstructionScream_6+dBFS.wav"},
+    { id: "waveform12", url: "media/botanicaAttempt.wav"},
+    { id: "waveform13", url: "media/HeartwoodSiblingFight-Master Ver5.wav"},
+    { id: "waveform14", url: "media/HeartwoodTitleTheme-Mastered_Ver3.wav"},
+    { id: "waveform15", url: "media/HeartwoodIntroCutsceneMix16bit.wav"}
+];
 
-// var playBtn = document.getElementById("playBtn");
+// Keep track of the currently playing spectrum
+let currentPlayingSpectrum = null;
 
-//         const wavesurfer = WaveSurfer.create({
-//         container: '#waveform',
-//         waveColor: '#BDBFC5',
-//         progressColor: '#D9D9D9 ',
-//         barWidth: 2 ,
-//         responsive: true,
-//         height: 30,
-//         barRadius: 4, 
-//         });
-//         wavesurfer.load('../media/Chase Me.mp3');
-//         // if player click on button, it will change button
-//         playBtn.onclick = function(){
-//             wavesurfer.playPause();
-//             if(playBtn.getAttribute("src") === "../images/Play Button.png"){
-//                playBtn.setAttribute("src", "../images/Pause Button.png");
-//             }else{
-//                playBtn.setAttribute("src", "../images/Play Button.png");
-//             }
-//         }
-//         //if it finish playing, change the button back to play button
-//         //stop the music 
-//         wavesurfer.on('finish', function(){
-//             playBtn.setAttribute("src", "../images/Play Button.png");
-//             wavesurfer.stop();
-//         })
-// function changeImage(){
-//     var img = document.getElementById("play");
-//     var button = document.getElementById("playBtn")
-//     if(img.scr.includes("Play Button.png")){
-//         img.src = "images/Pause Button.png";
-//     }else {
-//         img.src = "images/Play Button.png"
-//     }
-   
-// }
+// Initialize each waveform
+tracks.forEach((track) => {
+    // Create a WaveSurfer instance for the current track
+    const spectrum = WaveSurfer.create({
+        container: `#${track.id}`,
+        progressColor: "#D9D9D9",
+        barWidth: 2,
+        height: 80,
+        responsive: true,
+        waveColor: "rgb(122,122,122)",
+        cursorColor: "#FFFFFF",
+        cursorWidth: 3,
+        normalize: true,
+        hideScrollbar: true
+    });
+
+    // Load the track
+    spectrum.load(track.url);
+
+    // Get the control buttons for the current track
+    const container = document.querySelector(`#${track.id}`).closest(".spectrum-container");
+    const playButton = container.querySelector(".btn-play");
+    const pauseButton = container.querySelector(".btn-pause");
+    const stopButton = container.querySelector(".btn-stop");
+
+    // Add play button functionality
+    playButton.addEventListener("click", () => {
+        // Stop the currently playing track, if any
+        if (currentPlayingSpectrum && currentPlayingSpectrum !== spectrum) {
+            currentPlayingSpectrum.stop();
+            const previousContainer = document.querySelector(`#${currentPlayingSpectrum.params.container.substring(1)}`).closest(".spectrum-container");
+            const previousPlayButton = previousContainer.querySelector(".btn-play");
+            const previousPauseButton = previousContainer.querySelector(".btn-pause");
+            const previousStopButton = previousContainer.querySelector(".btn-stop");
+
+            // Reset the previous track's button states
+            previousPlayButton.disabled = false;
+            previousPauseButton.disabled = true;
+            previousStopButton.disabled = true;
+        }
+
+        // Play the current track
+        spectrum.play();
+        currentPlayingSpectrum = spectrum; // Set the currently playing spectrum
+
+        // Update button states
+        playButton.disabled = true;
+        pauseButton.disabled = false;
+        stopButton.disabled = false;
+    });
+
+    // Add pause button functionality
+    pauseButton.addEventListener("click", () => {
+        spectrum.pause();
+        playButton.disabled = false;
+        pauseButton.disabled = true;
+    });
+
+    // Add stop button functionality
+    stopButton.addEventListener("click", () => {
+        spectrum.stop();
+        playButton.disabled = false;
+        pauseButton.disabled = true;
+        stopButton.disabled = true;
+
+        // Clear the current playing spectrum if this track was playing
+        if (currentPlayingSpectrum === spectrum) {
+            currentPlayingSpectrum = null;
+        }
+    });
+
+    // Enable the play button once the waveform is ready
+    spectrum.on("ready", () => {
+        playButton.disabled = false;
+    });
+});

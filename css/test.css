@@ -1,37 +1,86 @@
-*{
-    margin: 0;
-    padding: 0;
+/* Center the spectrum column on the page */
+body {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes the full viewport height */
+    margin: 0; /* Remove default margin */
+    background-color: #f4f4f4; /* Optional: Background color for better visibility */
 }
-.hero{
-    width: 100%;
-    height: 100%;
-    background: #a9a9a9;
-    display:flex;
+
+/* Style the spectrum column */
+.spectrum-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between tracks */
+    width: 90%; /* Optional: Limit column width */
+    max-width: 800px; /* Adjust for a horizontal layout */
+    font-family: monospace;
+}
+
+/* Style each track container */
+.spectrum-container {
+    display: flex; /* Horizontal layout */
     align-items: center;
-    justify-content: center;
+    background-color: rgb(206, 183, 183);
+    padding: 15px;
+    border-radius: 10px;
 }
-.music{
-    width: 90%;
-    max-width: 300px;
-    max-height: 90px;
-    padding: 20px;
-    box-shadow: 0 0 20px rebeccapurple;
-    background: #858282;
+
+/* Style the music icon */
+.track-icon {
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin-right: 20px; /* Space between icon and track info */
+}
+
+/* Track info and waveform alignment */
+.track-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.track-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.track-info p {
+    margin: 0;
+    font-size: 14px;
     color: #555;
 }
 
-.track{
+/* Control bar layout */
+.control-bar {
     display: flex;
-    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
 }
 
-.track img{
+.control-bar button {
+    border: none;
     cursor: pointer;
-    margin-right: 20px; 
-    height: 41px;
-    width: 36px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s ease-out;
+    background-color: rgb(253, 253, 253);
+    border-radius: 50%;
+    margin-right: 5px;
 }
 
-.track div{
-    flex: 1;
+.control-bar button:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+/* Waveform styling */
+.waveform {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
 }
