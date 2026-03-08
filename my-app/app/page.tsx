@@ -27,6 +27,7 @@ export default function Home() {
             <MusicSection/>
           </div>
         </section>
+        
         <div className="w-full bg-[#2E2C39]">
           <ThankYou/>
         </div>

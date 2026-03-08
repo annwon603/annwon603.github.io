@@ -1,6 +1,7 @@
 import React from "react";
 import localFont from "next/font/local";
 import MusicCard from './MusicCard';
+import {Rubik,Space_Mono} from 'next/font/google';
 
 const dogica = localFont({
     src: [
@@ -32,6 +33,23 @@ const dogicaPixel = localFont({
     ]
 })
 
+const rubik = Rubik({
+    subsets: ['latin'],
+    style: ['italic' , 'normal'],
+    preload: true,
+    weight: ['300','400','500','600','700','800','900'],
+
+})
+
+const space_mono = Space_Mono({
+    subsets: ['latin'],
+    style: ['italic' , 'normal'],
+    preload: true,
+    weight: ['400','700'],
+
+})
+
+
 const musicData = [
     {
         id: 1,
@@ -39,7 +57,7 @@ const musicData = [
         image: "/images/music_thumbnail/Mariposa.jpg",
         description: <span>Produced, mixed, and mastered for the pier area in "<b>Mariposa</b>" 
         <br></br> Inspired by Porter Robinson's Nurture album, a botantica album. </span>,
-        file: ""
+        file: "/audio/Pier 12.3 Master FINAL.wav"
     },
     {
         id: 2,
@@ -47,7 +65,7 @@ const musicData = [
         image: "/images/music_thumbnail/Choros.png",
         description: <span> Produced, mixed, and masterd for "<b>Choros</b>" <br></br>
             Inspired by the dark-orchestral soundtrack in Sinners (2025). </span>,
-        file: ""
+        file: "/audio/Accusation Mastered Ver1.wav"
     },
     {
         id: 3,
@@ -56,7 +74,7 @@ const musicData = [
         description: <span> Produced, mixed, and mastered for "<b>Magitune and Memory</b>", 
             a point and click game displayed at <span className="font-medium">MAVERic Studio </span>'s DnD inspired steampunk exhibit at 
             <span className="font-semibold italic"> San Diego Comic Con</span>.</span>,
-        file: ""
+        file: "/audio/ElectroSwing Master Ver 1(Pow 2).wav"
     },
     {
         id: 4,
@@ -66,7 +84,7 @@ const musicData = [
             <br></br>Vocal by <span className="font-medium">Breanna Lau </span>
              and <span className="font-medium">Bree Tassinari</span><br></br>
             Inspired by Slavic tradition music and Dragon Age Inquisition.</span>,
-        file: ""
+        file: "/audio/HeartwoodSiblingFight-Master Ver5.wav"
     },
      {
         id: 5,
@@ -74,7 +92,7 @@ const musicData = [
         image: "/images/music_thumbnail/dontspaceouticon.png",
         description: <span> Produced for the title screen of "<b>Don't Space Out</b>" 
             <br></br> Inspired by Retro 8-bit space games such as Space Invaders and Asteroids.</span>,
-        file: ""
+        file: "/audio/8bitIntro.wav"
     }
 
 ]
@@ -87,6 +105,9 @@ const MusicSection = () =>
             <h2 className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-2xl`}>
                 Music
             </h2>
+            <p className={`${space_mono.className} text-[#2e2c3990] text-sm mt-1`}>
+                Click on the image to play the track!
+            </p>
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 md:gap-12 mt-6">
                 {musicData.map((music) =>
                 <MusicCard
