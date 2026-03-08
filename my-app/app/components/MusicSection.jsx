@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, {useState} from "react";
 import localFont from "next/font/local";
 import MusicCard from './MusicCard';
 import {Rubik,Space_Mono} from 'next/font/google';
@@ -100,6 +101,7 @@ const musicData = [
 
 const MusicSection = () =>
 {
+    const [activeTrackId, setActiveTrackId] = useState(null);
     return(
         <div className="mx-4 sm:mx-10 md:mx-40 mt-4 md:mt-10 xl:mt-15 xl:py-25 py-10">
             <h2 className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-2xl`}>
@@ -112,10 +114,14 @@ const MusicSection = () =>
                 {musicData.map((music) =>
                 <MusicCard
                 key={music.id}
+                id={music.id}
                 title={music.title}
                 description={music.description}
                 imgURl={music.image}
-                filePath={music.file} />)}
+                filePath={music.file} 
+                activeTrackId={activeTrackId} //Pass currently playing ID
+                setActiveTrackId={setActiveTrackId} //Pass function to change it
+                />)}
             </div>
         </div>
     )

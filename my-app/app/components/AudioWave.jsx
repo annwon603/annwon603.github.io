@@ -1,48 +1,83 @@
 "use client";
-import React,{useState, useRef, useEffect} from "react";
-import { AudioVisualizer } from 'react-audio-visualize';
+import React, { useRef, useEffect, useState } from "react";
+import WaveSurfer from "wavesurfer.js";
 
+const Visualizer = ({ audioFilePath, isPlaying, setIsPlaying }) => {
+    const containerRef = useRef(null);
+    const wavesurferRef = useRef(null);
+    
+    // State to track if the component is visible on screen
+    const [shouldLoad, setShouldLoad] = useState(false);
 
+    // 1. Intersection Observer to detect when the container enters the viewport
+    useEffect(() => {
+        if (!containerRef.current || !audioFilePath) return;
 
-const Visualizer = ({audioFilePath, currentTime}) => {
-    //Blob is basically large audio binary file for example: .wav or .mp3
-    const [blob, setBlob] = useState(null);
-    const visualizerRef = useRef(null);
+        const observer = new IntersectionObserver(
+            (entries) => {
+                // When the container comes into view, trigger the load
+                if (entries[0].isIntersecting) {
+                    setShouldLoad(true);
+                    observer.disconnect(); // Stop observing once we've decided to load it
+                }
+            },
+            { threshold: 0.1 } // Triggers when at least 10% of the div is visible
+        );
 
-    //Converts audio filepath to blob
-    useEffect(() =>{
-        const fetchAudio = async () => {
-            try{
-                const response = await fetch(audioFilePath);
-                const audioBlob = await response.blob();
-                setBlob(audioBlob);
-            }catch(error)
-            {
-                console.error("Failed to load audio file:", error);
-            }
-        };
+        observer.observe(containerRef.current);
 
-        fetchAudio();
+        return () => observer.disconnect();
     }, [audioFilePath]);
 
+    // 2. Initialize wavesurfer ONLY after shouldLoad becomes true
+    useEffect(() => {
+        if (!shouldLoad || !audioFilePath) return;
 
-    return(
-        <div className="flex-1">
-            {blob && (
-            <AudioVisualizer
-                ref={visualizerRef}
-                blob={blob}
-                width={500}
-                height={75}
-                barWidth={2}
-                gap={1}
-                barColor={'#f76565'} //Unplayed color
-                barPlayedColor={"#FFFFFF"}
-                currentTime={currentTime}
-            />
-            )}
-        </div>
-    )
-}
+        const wavesurfer = WaveSurfer.create({
+            container: containerRef.current,
+            waveColor: "#AFA3D6",
+            progressColor: "#2E2C39",
+            cursorColor: "#EDEDED",
+            cursorWidth: 1,
+            url: audioFilePath,
+            barWidth: 2,
+            barGap: 2,
+            barRadius: 3,
+            height: 80,
+            normalize: true,
+            responsive:true,
+            hideScrollbar:true,
+        });
+
+        wavesurferRef.current = wavesurfer;
+
+        wavesurfer.on('play', () => setIsPlaying(true));
+        wavesurfer.on('pause', () => setIsPlaying(false));
+        wavesurfer.on('finish', () => setIsPlaying(false));
+
+        return () => {
+            wavesurfer.destroy();
+        };
+
+    }, [shouldLoad, audioFilePath]);
+
+    // 3. Listens to play-pause button from the parent MusicCard
+    useEffect(() => {
+        const ws = wavesurferRef.current;
+        if (!ws) return;
+
+        if (isPlaying && !ws.isPlaying()) {
+            ws.play();
+        } else if (!isPlaying && ws.isPlaying()) {
+            ws.pause();
+        }
+    }, [isPlaying]);
+
+    return (
+        // Added a fixed height class (h-[75px]) to match Wavesurfer's height
+        // This gives the Observer a physical space to "see" before Wavesurfer injects the canvas
+        <div ref={containerRef} className="w-3/4"></div>
+    );
+};
 
 export default Visualizer;

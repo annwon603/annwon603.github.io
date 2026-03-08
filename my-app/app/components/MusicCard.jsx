@@ -1,9 +1,9 @@
 "use client";
-import React, {useState,useRef} from "react";
+import React from "react";
 import {PlayIcon, PauseIcon } from "@heroicons/react/24/outline";
 import localFont from "next/font/local";
 import {Rubik} from 'next/font/google';
-import dynamic from 'next/dynamic';
+import Visualizer from "./AudioWave";
 
 
 const dogicaPixel = localFont({
@@ -29,36 +29,31 @@ const rubik = Rubik({
 
 })
 
-const Visualizer = dynamic(() => import('./AudioWave'), { 
-    ssr: false 
-});
-
-const MusicCard = ({imgURl, title, description, filePath}) => {
-    const [playPauseOpen, setPlayPauseOpen] = useState(false);
-    const[currentTime, setCurrentTime] = useState(0);
+const MusicCard = ({id, imgURl, title, description, filePath, activeTrackId, setActiveTrackId}) => {
+    const is_Playing = activeTrackId === id;
 
     const handlePlayPause = () =>{
-        if(playPauseOpen){
-            audioRef.current.pause();
+        if(is_Playing){
+            setActiveTrackId(null);
         }else{
-            audioRef.current.play();
+            setActiveTrackId(id);
         }
-        setPlayPauseOpen(!playPauseOpen);
     }
 
-    //Reference to the actual HTML5 audio format
-    const audioRef = useRef(null);
-
-    const audioFilePath = {filePath};
-
-    const handleTimeUpdate = () => {
-        setCurrentTime(audioRef.current.currentTime);
+    const handleSetIsPlaying = (playingStatus) => {
+        if(playingStatus){
+            setActiveTrackId(id);
+        }else{
+            if(activeTrackId===id){
+                setActiveTrackId(null);
+            }
+        }
     }
 
     return(
         <div>
             {/* //Track body */}
-            <div className="bg-[#EDEDED] py-2 px-4 mb-5 rounded-md shadow-sm">
+            <div className="bg-[#EDEDED] py-2 px-4 mb-5 rounded-md shadow-sm flex items-center gap-4 ">
                 {/* //Image + Play/Pause Button */}
                 <div className="h-24 w-24 xl:h-34 xl:w-34 rounded-md
                 bg-cover bg-center bg-no-repeat my-4 relative group"
@@ -73,7 +68,7 @@ const MusicCard = ({imgURl, title, description, filePath}) => {
                         {/* PlayButton */}
                         <button onClick={handlePlayPause}
                             className="h-14 w-14 p-2 relative justify-center items-center text-center">
-                                {!playPauseOpen ? (
+                                {!is_Playing ? (
                                     <PlayIcon className="h-10 w-10 text-[#AFA3D5] cursor-pointer hover:text-white
                                         absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                     </PlayIcon>
@@ -87,16 +82,10 @@ const MusicCard = ({imgURl, title, description, filePath}) => {
                     </div>
                 </div>
 
-                <audio
-                    ref={audioRef}
-                    src={audioFilePath}
-                    onTimeUpdate={handleTimeUpdate}
-                    onEnded={()=> setPlayPauseOpen(false)} //Resets when songs end
-                />
-
                 <Visualizer
-                    audioFilePath={audioFilePath}
-                    currentTime={currentTime}
+                    audioFilePath={filePath}
+                    isPlaying={is_Playing}
+                    setIsPlaying={handleSetIsPlaying}
                 />
             </div>
             <h5 className={`${dogicaPixel.className} text-[#2E2C39]`}> {title} </h5>
