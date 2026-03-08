@@ -13,7 +13,7 @@ const NavLink = ({href, title}) => {
     return (
         <Link 
             href={href}
-            className = {`${space_mono.className} block py-2 pl-3 pr-4 text-[#A99DCF] sm:text-sm rounded`}
+            className = {`${space_mono.className} block py-2 pl-3 pr-4 text-[#A99DCF] hover:text-[#2E2C39] sm:text-sm rounded`}
         >
             {title}
         </Link>

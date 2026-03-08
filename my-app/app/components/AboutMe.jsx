@@ -96,7 +96,7 @@ const AboutMeSection = () => {
 
         </div>
         {/* Phone View */}
-        <div className="mobile-menu md:hidden flex flex-col items-center justify-center mx-4 my-10 gap-4 py-10">
+        <div className="mobile-menu md:hidden flex flex-col items-center justify-center mx-4 gap-4 py-9">
             <div className="bg-white border-[#2E2C39] border-2">
                 <p className={`${dogicaPixel.className} text-[#2E2C39] font-bold text-center py-2 px-4`}> 
                     This is Annie Wong 

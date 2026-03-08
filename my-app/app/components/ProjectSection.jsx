@@ -130,7 +130,7 @@ const projectData = [
     },
     {
         id: 5,
-        title: "Serious Games: Climate Change",
+        title: <span className="tracking-[-0.1em]">Serious Games: Climate Change</span>,
         description: "Sound Designer and Audio Implementer Intern for a 3D openworld sandbox game. Still in development",
         image: "/images/project_thumbnail/climategames.png",
         directLink: "https://qi.ucsd.edu/the-climate-games/",
