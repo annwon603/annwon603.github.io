@@ -110,7 +110,7 @@ const NavBar = () => {
                 {/* Contacts on Desktop Mode */}
                 <div className="menu hidden md:block md:w-auto md:space-x-8 mt-0">
                     <div className="socials flex flex-row gap-2 p-4">
-                        <Link href="drive.google.com">
+                        <Link href="https://drive.google.com/file/d/1ebMD8YCTZxlNGBCATbPtqeKn6_6Xo9WA/view?usp=sharing">
                             <p className={`${space_mono.className} block py-2 pl-3 pr-4 text-[#A99DCF] hover:text-[#2E2C39] sm:text-sm rounded`}>RESUME</p>
                         </Link>
 

@@ -25,7 +25,7 @@ const HeroSection = () => {
             ></iframe>
 
             <div className="flex md:hidden lg:hidden xl:hidden socials flex-row gap-4 mt-10">
-                <Link href="drive.google.com">
+                <Link href="https://drive.google.com/file/d/1ebMD8YCTZxlNGBCATbPtqeKn6_6Xo9WA/view?usp=sharing">
                     <p className={`${space_mono.className} block py-2 pr-1 text-[#A99DCF] hover:text-[#2E2C39] text-lg rounded`}>RESUME</p>
                 </Link>
 

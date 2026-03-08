@@ -64,7 +64,7 @@ const musicData = [
         id: 2,
         title: "Accusation",
         image: "/images/music_thumbnail/Choros.png",
-        description: <span> Produced, mixed, and masterd for "<b>Choros</b>" <br></br>
+        description: <span> Produced, mixed, and mastered for "<b>Choros</b>" <br></br>
             Inspired by the dark-orchestral soundtrack in Sinners (2025). </span>,
         file: "/audio/Accusation Mastered Ver1.wav"
     },
