@@ -113,10 +113,10 @@ const NavBar = () => {
                         <Link href="drive.google.com">
                             <p className={`${space_mono.className} block py-2 pl-3 pr-4 text-[#A99DCF] sm:text-sm rounded`}>RESUME</p>
                         </Link>
-                        <Link href="github.com">
+                        <Link href="https://github.com/annwon603">
                             <Image src={GithubIcon} alt="Github Icon"/> 
                         </Link>
-                        <Link href="linkedin.com">
+                        <Link href="https://www.linkedin.com/in/annie-wong-4030a6226/">
                             <Image src={LinkedInIcon} alt="LinkedIn Icon"/>
                         </Link>
                         <Link href="gmail.com">

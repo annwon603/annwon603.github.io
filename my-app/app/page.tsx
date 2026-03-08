@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import AboutMeSection from "./components/AboutMe";
 import ProjectSection from "./components/ProjectSection";
 import MusicSection from "./components/MusicSection";
+import ThankYou from "./components/ThankYouSection";
 
 export default function Home() {
   return (
@@ -26,7 +27,9 @@ export default function Home() {
             <MusicSection/>
           </div>
         </section>
-
+        <div className="w-full bg-[#2E2C39]">
+          <ThankYou/>
+        </div>
         
       </main>
     </div>

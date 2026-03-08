@@ -160,7 +160,8 @@ const ProjectSection = () => {
                 imgURL={project.image}
                 directURL={project.directLink}
                 fullDescription={project.full_description}
-                codeStack={project.tag} />)}</div>
+                codeStack={project.tag} />)}
+            </div>
         </div>
         
     )
