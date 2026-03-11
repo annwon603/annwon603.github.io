@@ -84,7 +84,7 @@ const musicData = [
         description: <span> Composed, mixed, and mastered for "<b>Heartwood</b>" 
             <br></br>Vocal by <span className="font-medium">Breanna Lau </span>
              and <span className="font-medium">Bree Tassinari</span><br></br>
-            Inspired by Slavic tradition music and Dragon Age Inquisition.</span>,
+            Inspired by Slavic traditional music and Dragon Age Inquisition.</span>,
         file: "/audio/HeartwoodSiblingFight-Master Ver5.wav"
     },
      {
