@@ -1,5 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
+import localFont from "next/font/local";
+
+const dogicaPixel = localFont({
+    src: [
+        {
+            path: "../../fonts/dogicapixel.ttf",
+            weight: '400',
+            style: 'normal',
+        },
+        {
+            path: "../../fonts/dogicapixelbold.ttf",
+            weight: '700',
+            style: 'bold',
+        },
+    ]
+});
  
 const RetroWindow = ({ title, width, height, className = '', children, onClose }) => {
   return (
@@ -8,7 +24,7 @@ const RetroWindow = ({ title, width, height, className = '', children, onClose }
       {/* Title Bar */}
       <div className="h-6.75 w-full bg-gradient-to-r from-[#2E2C39] to-[#807B9F] border-b border-[#6D6D6D] flex justify-between items-center px-2 py-2">
         {title && (
-          <span className="text-white text-[10px] font-bold tracking-tighter uppercase" style={{ fontFamily: "'Dogica Pixel', sans-serif" }}>
+          <span className= {`${dogicaPixel.className} text-white text-[10px] font-bold tracking-tighter uppercase`}>
             {title}
           </span>
         )}

@@ -144,7 +144,10 @@ const projectData = [
         tag: ["Unreal Engine 5", "C++", "Wwise", "Metasound"],
     }
 ]
-
+/* 1. Mobile First: h-[250px] (Base height for phones) */
+/* 2. Tablet: md:h-[300px] (Standard iPads/Tablets) */
+/* 3. iPad Pro / Laptop: lg:h-[400px] (Portrait iPad Pro) */
+/* 4. Large Desktop: xl:h-[500px] (Landscape iPad Pro / Big Screens) */
 const ProjectSection = () => {
     return(
         <div className="mx-4 sm:mx-10 md:mx-40 my-4 md:my-10 xl:my-15">

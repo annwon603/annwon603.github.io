@@ -39,10 +39,10 @@ const dogicaPixel = localFont({
 const AboutMeSection = () => {
   return (
     // Outer wrapper acting as your "Group 13/18/19" frame
-    <div className="">
+    <div className={`${dogicaPixel.className}`}>
     {/* // We use a relative container scaled to your design's approximate size */}
         {/* Desktop View */}
-        <div className="hidden md:flex justify-center item-center relative w-full max-w-225 mx-auto  filter drop-shadow-sm font-['Dogica_Pixel']">
+        <div className="hidden md:flex justify-center item-center relative w-full max-w-225 mx-auto  filter drop-shadow-sm">
 
             {/* Big Main Window (Rectangle 74/75) */}
             <div className="bg-[#EDEDED] border-[#6D6D6D] border-2 p-4 my-24">

@@ -74,7 +74,7 @@ const ProjectCard = ({imgURL, title, description, codeStack, directURL, fullDesc
     return(
         <div>
             <div
-                className="h-57 lg:h-100 lg:w-180 xl:h-72 xl:w-130 w-full 
+                className="h-57 md:h-75 md:w-155 lg:h-100 lg:w-180 xl:h-72 xl:w-130 w-full 
                 bg-cover bg-center bg-no-repeat my-4 relative group rounded-md shadow-sm" 
                 style={{backgroundImage: `url(${imgURL})`}}
             >
