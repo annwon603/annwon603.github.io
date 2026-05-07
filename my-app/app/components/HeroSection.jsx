@@ -24,6 +24,15 @@ const HeroSection = () => {
                 allowFullScreen
             ></iframe>
 
+            <h1 className={`${space_mono.className} text-[#2E2C39] text-center md:text-2xl sm:text-xl m-6`}> Recent Work </h1>
+            <iframe className = "w-full aspect-video rounded-md shadow-md"
+                src="https://www.youtube.com/embed/49y_fKoqkRE?si=Ga7w2xljLrXKuOzl"
+                title="Youtube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin" 
+                allowFullScreen
+            ></iframe>
+
             {/*Contacts on Mobile View */}
 
             <div className="flex md:hidden lg:hidden xl:hidden socials flex-row gap-4 mt-10">
